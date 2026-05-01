@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="hermes-archaeology-museum">
+    <meta name="artifact-type" content="terminal_archaeology">
+    <meta name="release-tag" content="v2026.3.30">
+    <title>Terminal Archaeology — v2026.3.30</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { -webkit-font-smoothing: antialiased; }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            92% { opacity: 1; }
+            93% { opacity: 0.8; }
+            94% { opacity: 1; }
+        }
+        @keyframes scanline {
+            0% { top: -2px; }
+            100% { top: 100%; }
+        }
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        body {
+            margin: 0;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .terminal {
+            width: 100%;
+            max-width: 900px;
+            background: #0d1a0d;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0, 255, 70, 0.08), inset 0 0 80px rgba(0,0,0,0.5);
+            animation: flicker 8s infinite;
+        }
+        .terminal-header {
+            background: #1a1a1a;
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #222;
+        }
+        .dots { display: flex; gap: 6px; }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        .terminal-title {
+            color: #556;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+        }
+        .terminal-body {
+            position: relative;
+            padding: 20px;
+            min-height: 500px;
+            overflow: auto;
+            max-height: 90vh;
+        }
+        .output {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12.5px;
+            line-height: 1.5;
+            color: #33ff66;
+            white-space: pre;
+            text-shadow: 0 0 5px rgba(51, 255, 102, 0.3);
+        }
+        .sha {
+            color: #66aaff;
+        }
+        .scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(51, 255, 102, 0.06);
+            animation: scanline 6s linear infinite;
+            pointer-events: none;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">hermes@archaeology ~ v2026.3.30</div>
+        </div>
+        <div class="terminal-body">
+            <pre class="output">
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  HERMES AGENT — ARCHAEOLOGICAL TERMINAL RECORD                  ║
+  ║  Release: v2026.3.30            Date: 2026-03-30                ║
+  ╚══════════════════════════════════════════════════════════════════╝
+
+  ┌─ RELEASE STATISTICS ─────────────────────────────────────────────┐
+  │ RESOLVED ISSUES    ████████████████████████████████████████     16 │
+  └─────────────────────────────────────────────────────────────────┘
+
+  ┌─ FILE DELTA ─────────────────────────────────────────────────────┐
+  │ [++] ADDED: 57 files
+  │     .dockerignore                                        +13    -0    
+  │     .github/workflows/docker-publish.yml                 +61    -0    
+  │     Dockerfile                                           +20    -0    
+  │     RELEASE_v0.6.0.md                                    +249   -0    
+  │     docker/SOUL.md                                       +15    -0    
+  │     docker/entrypoint.sh                                 +34    -0    
+  │     ... and 51 more
+  │
+  │ [~~] MODIFIED: 171 files
+  │     .env.example                                         +5     -1    
+  │     AGENTS.md                                            +78    -0    
+  │     acp_adapter/entry.py                                 +1     -1    
+  │     acp_adapter/server.py                                +46    -3    
+  │     agent/auxiliary_client.py                            +73    -12   
+  │     agent/context_compressor.py                          +2     -2    
+  │     ... and 165 more
+  │
+  │ [--] REMOVED: 1 files
+  │     skills/music-creation/DESCRIPTION.md                 +0     -3    
+  │
+  │ [>>] RENAMED: 1 files
+  │     optional-skills/research/parallel-cli/SKILL.md       +0     -0    
+  │
+  └─────────────────────────────────────────────────────────────────┘
+
+  ┌─ COMMIT LOG ─────────────────────────────────────────────────────┐
+  │ <span class='sha'>e08778fa</span> chore: release v0.6.0 (2026.3.30) (#3985)              2026-03-30 │
+  │ <span class='sha'>fb634068</span> fix(security): extend secret redaction to ElevenLab... 2026-03-30 │
+  │ <span class='sha'>74181fe7</span> fix: add TTY guard to interactive CLI commands to p... 2026-03-30 │
+  │ <span class='sha'>1e896b02</span> fix: resolve 7 failing CI tests (#3936)                2026-03-30 │
+  │ <span class='sha'>0b0c1b32</span> fix: openclaw migration overwrites model config dic... 2026-03-30 │
+  │ <span class='sha'>b4496b33</span> fix: background task media delivery + vision downlo... 2026-03-30 │
+  │ <span class='sha'>d028a94b</span> fix(whatsapp): skip reply prefix in bot mode — only... 2026-03-30 │
+  │ <span class='sha'>0e592aa5</span> fix(cli): remove input() from /tools disable that f... 2026-03-30 │
+  │ <span class='sha'>efae525d</span> feat(plugins): add inject_message interface for rem... 2026-03-30 │
+  │ <span class='sha'>5148682b</span> feat: mount skills directory into all remote backen... 2026-03-30 │
+  │ <span class='sha'>791f4e94</span> feat(slack): multi-workspace support via OAuth toke... 2026-03-30 │
+  │ <span class='sha'>a4b06476</span> fix(cron): tighten [SILENT] instruction to prevent ... 2026-03-30 │
+  │ <span class='sha'>138ea3fb</span> fix(docs): escape angle-bracket URLs in feishu.md b... 2026-03-30 │
+  │ <span class='sha'>ee61485c</span> feat(matrix): support native voice messages via MSC... 2026-03-30 │
+  │ <span class='sha'>947faed3</span> feat(approvals): make dangerous command approval ti... 2026-03-30 │
+  │ <span class='sha'>c288bbfb</span> fix(cli): prevent status bar wrapping into duplicat... 2026-03-30 │
+  │ <span class='sha'>a3479213</span> docs: comprehensive OpenClaw migration guide (#3900)   2026-03-30 │
+  │ <span class='sha'>09def65e</span> fix(migration): expand OpenClaw migration to cover ... 2026-03-30 │
+  │ <span class='sha'>649d1494</span> feat(telegram): add webhook mode as alternative to ... 2026-03-30 │
+  │ <span class='sha'>56024587</span> security: harden dangerous command detection and ad... 2026-03-30 │
+  │ <span class='sha'>1c900c45</span> fix(agent): support full context length resolution ... 2026-03-30 │
+  │ <span class='sha'>227601c2</span> feat(discord): add message processing reactions (sa... 2026-03-30 │
+  │ <span class='sha'>fd29933a</span> fix: use argparse entrypoint in top-level launcher ... 2026-03-30 │
+  │ <span class='sha'>839f798b</span> feat(telegram): add group mention gating and regex ... 2026-03-30 │
+  │ <span class='sha'>366bfc3c</span> fix(setup): auto-install matrix-nio during hermes s... 2026-03-30 │
+  │ ... 25 more commits
+  └─────────────────────────────────────────────────────────────────┘
+
+  hermes-archaeology-museum // generated 2026-03-30
+  $ _</pre>
+            <div class="scanline"></div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

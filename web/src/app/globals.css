@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --color-bg: #ffffff;
+  --color-fg: #111111;
+  --color-dim: #666666;
+  --color-border: #e0e0e0;
+  --color-surface: #f8f8f8;
+  --color-accent: #333333;
+}
+
+html {
+  font-family: var(--font-mono);
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+::selection {
+  background: #111;
+  color: #fff;
+}
