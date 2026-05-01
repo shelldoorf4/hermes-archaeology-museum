@@ -21,11 +21,24 @@ Open `website/index.html` in a browser.
 ## Running via Hermes Agent
 
 ```bash
-# Copy the skill into your Hermes skills directory
-cp -r hermes-skill ~/.hermes/skills/archaeology-museum
+# One-step setup: installs skill + dependencies
+bash setup_hermes.sh
 
 # Then ask Hermes:
 #   "Use the archaeology-museum skill to generate artifacts for all releases"
+```
+
+### Daily Cron (automated new-release detection)
+
+Inside a Hermes session:
+
+```
+/cron add "0 0 * * *" "The check_new_releases script output tells you if there
+are new Hermes Agent releases without artifacts. If NEW_RELEASES_DETECTED,
+navigate to the project directory shown in the output, delete data/releases.json,
+and run python3 generators/orchestrator.py. If [SILENT], do nothing."
+--script ~/.hermes/skills/archaeology-museum/scripts/check_new_releases.py
+--skill archaeology-museum --name "archaeology-museum-daily"
 ```
 
 ## Artifact Types
