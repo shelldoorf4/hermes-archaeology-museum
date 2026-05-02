@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="hermes-archaeology-museum">
+    <meta name="artifact-type" content="layered_composition">
+    <meta name="release-tag" content="v2026.3.17">
+    <title>Hermes Archaeology — v2026.3.17</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { -webkit-font-smoothing: antialiased; }
+body{margin:0;overflow:hidden;background:#0b0c10;display:flex;align-items:center;justify-content:center}
+    </style>
+</head>
+<body>
+<canvas id="c" style="width:100%;height:100vh;display:block;background:#0b0c10"></canvas>
+<script>(function(){
+var W=1200,H=900,seed=4270276401;
+var c=document.getElementById('c');
+c.width=W;c.height=H;
+var x=c.getContext('2d');
+var bg='#0b0c10',fg='#66fcf1';
+var acc=["#66fcf1", "#45a29e", "#c5c6c7", "#1f2833", "#66fcf1", "#45a29e"];
+var files=[{"n": ".env.example", "a": 24, "d": 0, "c": 24, "t": 0.007}, {"n": ".github/workflows/docs-site-checks.yml", "a": 39, "d": 0, "c": 39, "t": 0.012}, {"n": "AGENTS.md", "a": 42, "d": 6, "c": 48, "t": 0.014}, {"n": "CONTRIBUTING.md", "a": 43, "d": 1, "c": 44, "t": 0.013}, {"n": "README.md", "a": 56, "d": 1, "c": 57, "t": 0.017}, {"n": "RELEASE_v0.3.0.md", "a": 377, "d": 0, "c": 377, "t": 0.113}, {"n": "acp_adapter/__init__.py", "a": 1, "d": 0, "c": 1, "t": 0.0}, {"n": "acp_adapter/__main__.py", "a": 5, "d": 0, "c": 5, "t": 0.001}, {"n": "acp_adapter/auth.py", "a": 24, "d": 0, "c": 24, "t": 0.007}, {"n": "acp_adapter/entry.py", "a": 85, "d": 0, "c": 85, "t": 0.025}, {"n": "acp_adapter/events.py", "a": 171, "d": 0, "c": 171, "t": 0.051}, {"n": "acp_adapter/permissions.py", "a": 80, "d": 0, "c": 80, "t": 0.024}, {"n": "acp_adapter/server.py", "a": 479, "d": 0, "c": 479, "t": 0.143}, {"n": "acp_adapter/session.py", "a": 203, "d": 0, "c": 203, "t": 0.061}, {"n": "acp_adapter/tools.py", "a": 215, "d": 0, "c": 215, "t": 0.064}, {"n": "acp_registry/agent.json", "a": 12, "d": 0, "c": 12, "t": 0.004}, {"n": "acp_registry/icon.svg", "a": 25, "d": 0, "c": 25, "t": 0.007}, {"n": "agent/anthropic_adapter.py", "a": 1103, "d": 0, "c": 1103, "t": 0.33}, {"n": "agent/auxiliary_client.py", "a": 575, "d": 129, "c": 704, "t": 0.211}, {"n": "agent/context_compressor.py", "a": 37, "d": 12, "c": 49, "t": 0.015}, {"n": "agent/display.py", "a": 92, "d": 15, "c": 107, "t": 0.032}, {"n": "agent/insights.py", "a": 9, "d": 108, "c": 117, "t": 0.035}, {"n": "agent/model_metadata.py", "a": 20, "d": 0, "c": 20, "t": 0.006}, {"n": "agent/prompt_builder.py", "a": 64, "d": 56, "c": 120, "t": 0.036}, {"n": "agent/prompt_caching.py", "a": 4, "d": 2, "c": 6, "t": 0.002}, {"n": "agent/redact.py", "a": 1, "d": 1, "c": 2, "t": 0.001}, {"n": "agent/skill_commands.py", "a": 196, "d": 34, "c": 230, "t": 0.069}, {"n": "agent/smart_model_routing.py", "a": 184, "d": 0, "c": 184, "t": 0.055}, {"n": "agent/usage_pricing.py", "a": 134, "d": 0, "c": 134, "t": 0.04}, {"n": "cli-config.yaml.example", "a": 69, "d": 2, "c": 71, "t": 0.021}, {"n": "cli.py", "a": 2714, "d": 626, "c": 3340, "t": 1.0}, {"n": "cron/__init__.py", "a": 8, "d": 1, "c": 9, "t": 0.003}, {"n": "cron/jobs.py", "a": 207, "d": 29, "c": 236, "t": 0.071}, {"n": "cron/scheduler.py", "a": 159, "d": 45, "c": 204, "t": 0.061}, {"n": "docs/acp-setup.md", "a": 229, "d": 0, "c": 229, "t": 0.069}, {"n": "docs/honcho-integration-spec.html", "a": 698, "d": 0, "c": 698, "t": 0.209}, {"n": "docs/honcho-integration-spec.md", "a": 377, "d": 0, "c": 377, "t": 0.113}, {"n": "docs/migration/openclaw.md", "a": 110, "d": 0, "c": 110, "t": 0.033}, {"n": "environments/agent_loop.py", "a": 2, "d": 0, "c": 2, "t": 0.001}, {"n": "environments/agentic_opd_env.py", "a": 1213, "d": 0, "c": 1213, "t": 0.363}, {"n": "environments/tool_call_parsers/deepseek_v3_parser.py", "a": 27, "d": 14, "c": 41, "t": 0.012}, {"n": "gateway/channel_directory.py", "a": 4, "d": 2, "c": 6, "t": 0.002}, {"n": "gateway/config.py", "a": 115, "d": 10, "c": 125, "t": 0.037}, {"n": "gateway/delivery.py", "a": 6, "d": 4, "c": 10, "t": 0.003}, {"n": "gateway/hooks.py", "a": 3, "d": 1, "c": 4, "t": 0.001}, {"n": "gateway/mirror.py", "a": 3, "d": 1, "c": 4, "t": 0.001}, {"n": "gateway/pairing.py", "a": 3, "d": 1, "c": 4, "t": 0.001}, {"n": "gateway/platforms/ADDING_A_PLATFORM.md", "a": 1, "d": 1, "c": 2, "t": 0.001}, {"n": "gateway/platforms/base.py", "a": 223, "d": 19, "c": 242, "t": 0.072}, {"n": "gateway/platforms/discord.py", "a": 1182, "d": 174, "c": 1356, "t": 0.406}, {"n": "gateway/platforms/email.py", "a": 26, "d": 9, "c": 35, "t": 0.01}, {"n": "gateway/platforms/homeassistant.py", "a": 15, "d": 1, "c": 16, "t": 0.005}, {"n": "gateway/platforms/slack.py", "a": 292, "d": 55, "c": 347, "t": 0.104}, {"n": "gateway/platforms/telegram.py", "a": 285, "d": 57, "c": 342, "t": 0.102}, {"n": "gateway/platforms/whatsapp.py", "a": 3, "d": 1, "c": 4, "t": 0.001}, {"n": "gateway/run.py", "a": 1395, "d": 217, "c": 1612, "t": 0.483}, {"n": "gateway/session.py", "a": 153, "d": 13, "c": 166, "t": 0.05}, {"n": "gateway/status.py", "a": 304, "d": 11, "c": 315, "t": 0.094}, {"n": "gateway/sticker_cache.py", "a": 3, "d": 1, "c": 4, "t": 0.001}, {"n": "gateway/stream_consumer.py", "a": 177, "d": 0, "c": 177, "t": 0.053}, {"n": "hermes_cli/__init__.py", "a": 2, "d": 2, "c": 4, "t": 0.001}, {"n": "hermes_cli/auth.py", "a": 53, "d": 3, "c": 56, "t": 0.017}, {"n": "hermes_cli/banner.py", "a": 45, "d": 6, "c": 51, "t": 0.015}, {"n": "hermes_cli/callbacks.py", "a": 165, "d": 31, "c": 196, "t": 0.059}, {"n": "hermes_cli/claw.py", "a": 296, "d": 0, "c": 296, "t": 0.089}, {"n": "hermes_cli/codex_models.py", "a": 33, "d": 3, "c": 36, "t": 0.011}, {"n": "hermes_cli/commands.py", "a": 318, "d": 51, "c": 369, "t": 0.11}, {"n": "hermes_cli/config.py", "a": 226, "d": 19, "c": 245, "t": 0.073}, {"n": "hermes_cli/cron.py", "a": 173, "d": 42, "c": 215, "t": 0.064}, {"n": "hermes_cli/default_soul.py", "a": 76, "d": 0, "c": 76, "t": 0.023}, {"n": "hermes_cli/doctor.py", "a": 113, "d": 5, "c": 118, "t": 0.035}, {"n": "hermes_cli/env_loader.py", "a": 46, "d": 0, "c": 46, "t": 0.014}, {"n": "hermes_cli/gateway.py", "a": 658, "d": 94, "c": 752, "t": 0.225}, {"n": "hermes_cli/main.py", "a": 998, "d": 124, "c": 1122, "t": 0.336}, {"n": "hermes_cli/models.py", "a": 344, "d": 37, "c": 381, "t": 0.114}, {"n": "hermes_cli/plugins.py", "a": 449, "d": 0, "c": 449, "t": 0.134}, {"n": "hermes_cli/runtime_provider.py", "a": 123, "d": 7, "c": 130, "t": 0.039}, {"n": "hermes_cli/setup.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/skills_hub.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/skin_engine.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/status.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/tools_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/uninstall.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_constants.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_state.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "honcho_integration/cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "honcho_integration/client.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "honcho_integration/session.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "landingpage/index.html", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "landingpage/script.js", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "landingpage/style.css", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "mini_swe_runner.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "minisweagent_path.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "model_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/creative/blender-mcp/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/health/DESCRIPTION.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/health/neuroskill-bci/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/health/neuroskill-bci/references/api.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/health/neuroskill-bci/references/metrics.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/health/neuroskill-bci/references/protocols.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/migration/openclaw-migration/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/productivity/telephony/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/productivity/telephony/scripts/telephony.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/1password/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/1password/references/cli-examples.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/1password/references/get-started.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/DESCRIPTION.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/references/evidence-types.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/references/github-archive-guide.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/references/investigation-templates.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/references/recovery-techniques.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/scripts/evidence-store.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/templates/forensic-report.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/security/oss-forensics/templates/malicious-package-report.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plans/checkpoint-rollback.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "pyproject.toml", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "rl_cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "run_agent.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "scripts/discord-voice-doctor.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "scripts/install.sh", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/apple/apple-notes/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/apple/apple-reminders/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/apple/imessage/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/autonomous-ai-agents/hermes-agent/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/autonomous-ai-agents/opencode/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/README.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/architecture.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/composition.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/effects.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/inputs.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/optimization.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/scenes.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/shaders.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/references/troubleshooting.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/data-science/DESCRIPTION.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/data-science/jupyter-live-kernel/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/email/himalaya/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/github/codebase-inspection/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/mcp/mcporter/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/media/gif-search/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/media/songsee/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/mlops/training/axolotl/references/api.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/mlops/training/pytorch-fsdp/references/other.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/mlops/training/unsloth/references/llms-full.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/mlops/training/unsloth/references/llms-txt.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/mlops/training/unsloth/references/llms.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/productivity/google-workspace/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/productivity/google-workspace/scripts/setup.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/productivity/linear/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/productivity/notion/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/research/arxiv/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/research/blogwatcher/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/research/duckduckgo-search/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/research/ml-paper-writing/references/citation-workflow.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/research/parallel-cli/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/smart-home/openhue/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/social-media/DESCRIPTION.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/social-media/xitter/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/software-development/plan/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/acp/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/acp/test_auth.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/acp/test_events.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/acp/test_permissions.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/acp/test_server.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/acp/test_session.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/acp/test_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_auxiliary_client.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_context_compressor.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_display_emoji.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_prompt_builder.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_prompt_caching.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_redact.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_skill_commands.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/agent/test_smart_model_routing.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/conftest.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/cron/test_jobs.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/cron/test_scheduler.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/fakes/fake_ha_server.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_background_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_channel_directory.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_config_cwd_bridge.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_delivery.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_discord_free_response.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_discord_imports.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_discord_media_metadata.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_discord_opus.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_discord_send.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_discord_slash_commands.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_email.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_gateway_shutdown.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_homeassistant.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_honcho_lifecycle.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_interrupt_key_match.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_pii_redaction.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_plan_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_platform_base.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_reasoning_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_resume_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_retry_replacement.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_run_progress_topics.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_runner_fatal_adapter.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_runner_startup_failures.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_send_image_file.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_session.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_session_env.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_session_hygiene.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_slack.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_ssl_certs.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_status.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_status_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_stt_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_telegram_conflict.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_telegram_documents.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_telegram_format.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_telegram_photo_interrupts.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_title_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_update_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/gateway/test_voice_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_chat_skills_flag.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_claw.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_cmd_update.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_commands.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_cron.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_doctor.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_env_loader.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_gateway.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_gateway_linger.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_gateway_runtime_health.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_gateway_service.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_model_validation.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_models.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_path_completion.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_placeholder_usage.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_sessions_delete.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_set_config_value.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_setup.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_setup_model_provider.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_setup_noninteractive.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_setup_openclaw_migration.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_setup_prompt_menus.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_skills_hub.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_skills_install_flags.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_skin_engine.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_status_model_provider.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_tools_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_update_autostash.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_update_check.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/hermes_cli/test_update_gateway_restart.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/honcho_integration/test_async_memory.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/honcho_integration/test_cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/honcho_integration/test_client.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/integration/test_voice_channel_flow.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/run_interrupt_test.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/skills/test_google_oauth_setup.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/skills/test_telephony_skill.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_413_compression.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_agent_loop.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_anthropic_adapter.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_anthropic_error_handling.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_anthropic_oauth_flow.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_anthropic_provider_persistence.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_api_key_providers.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_atomic_json_write.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_atomic_yaml_write.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_auxiliary_config_bridge.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_batch_runner_checkpoint.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_approval_ui.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_init.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_interrupt_subagent.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_mcp_config_watch.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_model_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_new_session.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_plan_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_prefix_matching.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_preloaded_skills.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_provider_resolution.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_retry.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_secret_capture.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_skin_integration.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_status_bar.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_codex_models.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_dict_tool_call_args.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_evidence_store.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_hermes_state.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_insights.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_interactive_interrupt.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_interrupt_propagation.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_managed_server_tool_support.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_minisweagent_path.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_openai_client_lifecycle.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_plugins.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_provider_parity.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_quick_commands.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_real_interrupt_subagent.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_reasoning_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_redirect_stdout_issue.py", "a": 0, "d": 0, "c": 0, "t": 0.0}];
+var dirs=[{"name": "root", "count": 15, "churn": 3961}, {"name": ".github", "count": 1, "churn": 39}, {"name": "acp_adapter", "count": 9, "churn": 1263}, {"name": "acp_registry", "count": 2, "churn": 37}, {"name": "agent", "count": 12, "churn": 2776}, {"name": "cron", "count": 3, "churn": 449}, {"name": "docs", "count": 4, "churn": 1414}, {"name": "environments", "count": 3, "churn": 1256}, {"name": "gateway", "count": 19, "churn": 4771}, {"name": "hermes_cli", "count": 23, "churn": 4542}, {"name": "honcho_integration", "count": 3, "churn": 0}, {"name": "landingpage", "count": 3, "churn": 0}, {"name": "optional-skills", "count": 21, "churn": 0}, {"name": "plans", "count": 1, "churn": 0}, {"name": "scripts", "count": 2, "churn": 0}, {"name": "skills", "count": 40, "churn": 0}, {"name": "tests", "count": 139, "churn": 0}];
+var grid=[[0, 0, 1200, 285], [0, 285, 694, 103], [694, 285, 130, 103], [824, 285, 66, 103], [890, 285, 310, 103], [0, 388, 1200, 14], [0, 402, 473, 26], [473, 402, 727, 26], [0, 428, 1200, 25], [0, 453, 1200, 206], [0, 659, 129, 158], [0, 817, 129, 83], [129, 659, 68, 241], [197, 659, 102, 241], [299, 659, 41, 79], [299, 738, 41, 162], [339, 659, 97, 97], [339, 756, 97, 144], [437, 659, 74, 241], [511, 659, 27, 241], [538, 659, 46, 241], [584, 659, 60, 241], [643, 659, 557, 48], [643, 707, 557, 64], [643, 770, 209, 130], [852, 770, 348, 130]];
+var tblocks=[{"type": "index", "lines": [".env.example                                         4834", ".github/workflows/docs-site-checks.yml               4408", "AGENTS.md                                            7989", "CONTRIBUTING.md                                      5434", "README.md                                            8532", "RELEASE_v0.3.0.md                                    1033", "acp_adapter/__init__.py                              3749", "acp_adapter/__main__.py                              9719", "acp_adapter/auth.py                                  5229", "acp_adapter/entry.py                                 4833", "acp_adapter/events.py                                7911", "acp_adapter/permissions.py                           4642", "acp_adapter/server.py                                7070", "acp_adapter/session.py                               8574", "acp_adapter/tools.py                                 6742", "acp_registry/agent.json                              6411", "acp_registry/icon.svg                                8275", "agent/anthropic_adapter.py                           2454", "agent/auxiliary_client.py                            9922", "agent/context_compressor.py                          4576", "agent/display.py                                     2780", "agent/insights.py                                     947", "agent/model_metadata.py                              1483", "agent/prompt_builder.py                              9003", "agent/prompt_caching.py                              1831", "agent/redact.py                                      7570", "agent/skill_commands.py                              5636", "agent/smart_model_routing.py                         4260", "agent/usage_pricing.py                                261", "cli-config.yaml.example                              2027", "cli.py                                               1711", "cron/__init__.py                                      224", "cron/jobs.py                                          492", "cron/scheduler.py                                    8214", "docs/acp-setup.md                                    9361", "docs/honcho-integration-spec.html                    6084", "docs/honcho-integration-spec.md                      6267", "docs/migration/openclaw.md                           8824", "environments/agent_loop.py                           6854", "environments/agentic_opd_env.py                      9154", "environments/tool_call_parsers/deepseek_v3_parser.py   5557", "gateway/channel_directory.py                         8782", "gateway/config.py                                     230", "gateway/delivery.py                                  2117", "gateway/hooks.py                                     9338", "gateway/mirror.py                                    5840", "gateway/pairing.py                                   8923", "gateway/platforms/ADDING_A_PLATFORM.md               3773", "gateway/platforms/base.py                            3353", "gateway/platforms/discord.py                         7570", "gateway/platforms/email.py                           3473", "gateway/platforms/homeassistant.py                   4632", "gateway/platforms/slack.py                           8288", "gateway/platforms/telegram.py                        6794", "gateway/platforms/whatsapp.py                        9703", "gateway/run.py                                        439", "gateway/session.py                                    737", "gateway/status.py                                    2608", "gateway/sticker_cache.py                             6184", "gateway/stream_consumer.py                           6779", "hermes_cli/__init__.py                               7650", "hermes_cli/auth.py                                   5377", "hermes_cli/banner.py                                 5726", "hermes_cli/callbacks.py                              5005", "hermes_cli/claw.py                                   5380", "hermes_cli/codex_models.py                           3299", "hermes_cli/commands.py                               7634", "hermes_cli/config.py                                 8125", "hermes_cli/cron.py                                   8164", "hermes_cli/default_soul.py                           5202", "hermes_cli/doctor.py                                 4412", "hermes_cli/env_loader.py                             3803", "hermes_cli/gateway.py                                6398", "hermes_cli/main.py                                   3274", "hermes_cli/models.py                                 7527", "hermes_cli/plugins.py                                2000", "hermes_cli/runtime_provider.py                       2006", "hermes_cli/setup.py                                  9432", "hermes_cli/skills_hub.py                             4236", "hermes_cli/skin_engine.py                            1948"]}, {"type": "log", "lines": ["  Merge pull request #1634 from NousResearch/hermes/hermes-a86162db", "  chore: release v0.3.0 (v2026.3.17)", "  fix(gateway): overwrite stale PID in gateway_state.json on restart", "  feat(browser): multi-provider cloud browser support + Browser Use integration", "  feat: add Vercel AI Gateway provider (#1628)", "  fix: skip stale cron jobs on gateway restart instead of firing immediately", "  fix: send_animation metadata, MarkdownV2 inline code splitting, tirith cosign-fr", "  fix: add Claude Code user-agent to OAuth token exchange/refresh requests", "  fix: make OAuth login URL prominent for SSH/headless users", "  refactor: centralize slash command registry (#1603)", "  fix: improve OAuth login UX for headless/SSH users", "  feat: Hermes-native PKCE OAuth flow for Claude Pro/Max subscriptions", "  fix: improve execute_code error logging and harden cleanup (#1623)", "  fix: isolate test_anthropic_adapter from local credentials", "  fix(gateway): Recover stale service state", "  fix: context counter shows cached token count in status bar", "  Merge pull request #1598 from NousResearch/shloms/ascii-video-v3", "  fix: auto-detect D-Bus session bus for systemctl --user on headless servers (#16", "  installer: clarify why sudo is needed at every prompt (#1602)", "  feat: add /bg as alias for /background slash command (#1590)"]}, {"type": "diff", "lines": ["+ acp_adapter/__init__.py  (+1/-0)", "+ acp_adapter/__main__.py  (+5/-0)", "+ acp_adapter/auth.py  (+24/-0)", "+ acp_adapter/entry.py  (+85/-0)", "+ acp_adapter/events.py  (+171/-0)", "+ acp_adapter/permissions.py  (+80/-0)", "+ acp_adapter/server.py  (+479/-0)", "+ acp_adapter/session.py  (+203/-0)", "+ acp_adapter/tools.py  (+215/-0)", "+ agent/anthropic_adapter.py  (+1103/-0)", "+ agent/auxiliary_client.py  (+575/-129)", "+ agent/context_compressor.py  (+37/-12)", "+ agent/display.py  (+92/-15)", "+ agent/insights.py  (+9/-108)", "+ agent/model_metadata.py  (+20/-0)", "+ agent/prompt_builder.py  (+64/-56)", "+ agent/prompt_caching.py  (+4/-2)", "+ agent/redact.py  (+1/-1)", "+ agent/skill_commands.py  (+196/-34)", "+ agent/smart_model_routing.py  (+184/-0)", "+ agent/usage_pricing.py  (+134/-0)"]}, {"type": "stats", "lines": ["root/  15 files  3961 changes", ".github/  1 files  39 changes", "acp_adapter/  9 files  1263 changes", "acp_registry/  2 files  37 changes", "agent/  12 files  2776 changes", "cron/  3 files  449 changes", "docs/  4 files  1414 changes", "environments/  3 files  1256 changes", "gateway/  19 files  4771 changes", "hermes_cli/  23 files  4542 changes"]}];
+var commits=["Merge pull request #1634 from NousResearch/hermes/hermes-a86162db", "chore: release v0.3.0 (v2026.3.17)", "fix(gateway): overwrite stale PID in gateway_state.json on restart", "feat(browser): multi-provider cloud browser support + Browser Use integration", "feat: add Vercel AI Gateway provider (#1628)", "fix: skip stale cron jobs on gateway restart instead of firing immediately", "fix: send_animation metadata, MarkdownV2 inline code splitting, tirith cosign-fr", "fix: add Claude Code user-agent to OAuth token exchange/refresh requests", "fix: make OAuth login URL prominent for SSH/headless users", "refactor: centralize slash command registry (#1603)", "fix: improve OAuth login UX for headless/SSH users", "feat: Hermes-native PKCE OAuth flow for Claude Pro/Max subscriptions", "fix: improve execute_code error logging and harden cleanup (#1623)", "fix: isolate test_anthropic_adapter from local credentials", "fix(gateway): Recover stale service state", "fix: context counter shows cached token count in status bar", "Merge pull request #1598 from NousResearch/shloms/ascii-video-v3", "fix: auto-detect D-Bus session bus for systemctl --user on headless servers (#16", "installer: clarify why sudo is needed at every prompt (#1602)", "feat: add /bg as alias for /background slash command (#1590)", "fix: hide Honcho session line on CLI load when no API key configured (#1582)", "Refactor ascii-video skill: creative-first SKILL.md, consolidate reference files", "fix: Anthropic OAuth compatibility \u2014 Claude Code identity fingerprinting (#1597)", "Merge pull request #1585 from 0xbyt4/fix/anthropic-error-handling", "fix(anthropic): retry 429/529 errors and surface error details to users", "Merge pull request #1538 from NousResearch/hermes/hermes-a098c323", "merge: resolve conflicts with main (show_cost, turn routing, docker docs)", "docs: add streaming section to configuration guide", "fix(gateway): prevent message flooding on adapters without edit support", "fix: hermes update causes dual gateways on macOS (launchd) (#1567)"];
+
+var _s=seed;
+function R(){_s=(_s*16807)%2147483647;return(_s&0x7fffffff)/2147483647;}
+
+// Fill bg
+x.fillStyle=bg;
+x.fillRect(0,0,W,H);
+
+// LAYER 1: Dense colored block grid
+for(var i=0;i<grid.length;i++){
+  var g=grid[i],gx=g[0],gy=g[1],gw=g[2],gh=g[3];
+  var fi=i%Math.max(files.length,1);
+  var f=files.length?files[fi]:{t:0.5,a:10,d:5,c:15};
+  var col=acc[i%acc.length];
+  var t=f.t;
+
+  // Cell fill: dense small blocks
+  var bs=Math.max(2,Math.round(3+R()*5));
+  for(var by=gy;by<gy+gh;by+=bs){
+    for(var bx=gx;bx<gx+gw;bx+=bs){
+      var pick=R();
+      if(pick<t*0.7){
+        x.fillStyle=col;
+        x.globalAlpha=0.4+R()*0.6;
+      } else if(pick<t*0.7+0.15){
+        x.fillStyle=acc[Math.floor(R()*acc.length)];
+        x.globalAlpha=0.2+R()*0.5;
+      } else {
+        x.fillStyle=bg;
+        x.globalAlpha=0.6+R()*0.4;
+      }
+      x.fillRect(Math.round(bx),Math.round(by),bs,bs);
+    }
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 2: Grid borders
+x.strokeStyle=fg;
+x.globalAlpha=0.15;
+x.lineWidth=1;
+for(var i=0;i<grid.length;i++){
+  var g=grid[i];
+  x.strokeRect(g[0],g[1],g[2],g[3]);
+}
+x.globalAlpha=1;
+
+// LAYER 3: Horizontal color bands (pixel sort effect)
+var nBands=3+Math.round(R()*5);
+for(var b=0;b<nBands;b++){
+  var by=Math.round(R()*H*0.9);
+  var bh=Math.max(4,Math.round(R()*30));
+  var col1=acc[Math.floor(R()*acc.length)];
+  var col2=acc[Math.floor(R()*acc.length)];
+  var startX=Math.round(R()*W*0.3);
+  var endX=Math.round(startX+W*0.3+R()*W*0.4);
+
+  for(var bx=startX;bx<endX;bx+=2){
+    var t2=(bx-startX)/(endX-startX);
+    x.fillStyle=t2<0.5?col1:col2;
+    x.globalAlpha=0.3+R()*0.4;
+    x.fillRect(bx,by,2,bh);
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 4: Overlay panels with text content
+var panels=[];
+for(var ti=0;ti<tblocks.length;ti++){
+  var tb=tblocks[ti];
+  var px=Math.round(R()*W*0.5);
+  var py=Math.round(R()*H*0.5);
+  var pw=Math.round(200+R()*500);
+  var ph=Math.round(150+R()*400);
+  panels.push({x:px,y:py,w:pw,h:ph,tb:tb});
+}
+
+// Draw panels
+for(var pi=0;pi<panels.length;pi++){
+  var p=panels[pi];
+  var panelBg=R()<0.5?bg:acc[Math.floor(R()*acc.length)];
+  x.fillStyle=panelBg;
+  x.globalAlpha=0.7+R()*0.3;
+  x.fillRect(p.x,p.y,p.w,p.h);
+
+  // Panel border
+  x.strokeStyle=fg;
+  x.globalAlpha=0.3;
+  x.lineWidth=1;
+  x.strokeRect(p.x,p.y,p.w,p.h);
+
+  // Text content
+  x.globalAlpha=0.7+R()*0.3;
+  x.fillStyle=fg;
+  var fontSize=Math.round(8+R()*4);
+  x.font=fontSize+'px monospace';
+  var lines=p.tb.lines||[];
+  var ly=p.y+fontSize+4;
+  for(var li=0;li<lines.length&&ly<p.y+p.h-4;li++){
+    var line=lines[li];
+    if(line.length>Math.floor(p.w/(fontSize*0.6))){
+      line=line.substring(0,Math.floor(p.w/(fontSize*0.6)));
+    }
+    x.fillText(line,p.x+6,ly);
+    ly+=fontSize+2;
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 5: Large accent rectangles (bold color blocks like the reference)
+var nBlocks=2+Math.round(R()*4);
+for(var i=0;i<nBlocks;i++){
+  var bx2=Math.round(R()*W*0.7);
+  var by2=Math.round(R()*H*0.7);
+  var bw2=Math.round(80+R()*300);
+  var bh2=Math.round(60+R()*200);
+  x.fillStyle=acc[Math.floor(R()*acc.length)];
+  x.globalAlpha=0.15+R()*0.35;
+  x.fillRect(bx2,by2,bw2,bh2);
+}
+x.globalAlpha=1;
+
+// LAYER 6: Scattered commit text at various sizes
+for(var i=0;i<commits.length;i++){
+  var tx=R()*W*0.85;
+  var ty=20+R()*H*0.9;
+  var ts=Math.round(7+R()*14);
+  x.font=ts+'px monospace';
+  x.fillStyle=R()<0.4?fg:acc[Math.floor(R()*acc.length)];
+  x.globalAlpha=0.08+R()*0.25;
+  x.fillText(commits[i],tx,ty);
+}
+x.globalAlpha=1;
+
+// LAYER 7: Filename waterfall (dense vertical text column)
+var colX=Math.round(R()*W*0.3);
+var colW=Math.round(200+R()*300);
+x.font='8px monospace';
+x.fillStyle=fg;
+x.globalAlpha=0.15;
+x.fillRect(colX,0,colW,H);
+x.globalAlpha=0.6;
+var fy=10;
+for(var i=0;i<files.length&&fy<H;i++){
+  var fn=files[i].n;
+  if(fn.length>Math.floor(colW/5))fn=fn.substring(0,Math.floor(colW/5));
+  x.fillStyle=files[i].t>0.5?acc[i%acc.length]:fg;
+  x.globalAlpha=0.3+files[i].t*0.5;
+  x.fillText(fn,colX+4,fy);
+  fy+=10;
+}
+x.globalAlpha=1;
+
+// LAYER 8: Directory labels (large, semi-transparent)
+for(var i=0;i<dirs.length&&i<8;i++){
+  var d=dirs[i];
+  var dx=Math.round(R()*W*0.7);
+  var dy=Math.round(R()*H*0.8)+40;
+  var ds=Math.round(18+R()*30);
+  x.font='bold '+ds+'px monospace';
+  x.fillStyle=acc[i%acc.length];
+  x.globalAlpha=0.08+R()*0.12;
+  x.fillText(d.name+'/',dx,dy);
+}
+x.globalAlpha=1;
+
+// LAYER 9: Pixel noise strips (glitch effect)
+var nStrips=5+Math.round(R()*10);
+for(var i=0;i<nStrips;i++){
+  var sy=Math.round(R()*H);
+  var sh=Math.max(1,Math.round(R()*4));
+  var sx=Math.round(R()*W*0.5);
+  var sw=Math.round(W*0.2+R()*W*0.5);
+  var sc=acc[Math.floor(R()*acc.length)];
+  x.fillStyle=sc;
+  x.globalAlpha=0.3+R()*0.5;
+  x.fillRect(sx,sy,sw,sh);
+}
+x.globalAlpha=1;
+
+// LAYER 10: Data stat overlay
+x.font='10px monospace';
+x.fillStyle=fg;
+x.globalAlpha=0.35;
+var sx2=W-200;
+var sy2=20;
+var statText=['v2026.3.17'];
+for(var i=0;i<dirs.length&&i<6;i++){
+  statText.push(dirs[i].name+'/  '+dirs[i].count+' files');
+}
+for(var i=0;i<statText.length;i++){
+  x.fillText(statText[i],sx2,sy2+i*14);
+}
+
+// Signature
+x.globalAlpha=0.3;
+x.font='9px monospace';
+x.fillText('v2026.3.17 — hermes archaeology',8,H-8);
+x.globalAlpha=1;
+
+})();</script>
+</body>
+</html>

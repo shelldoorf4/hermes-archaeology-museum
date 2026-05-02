@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS artifacts (
   render_format TEXT NOT NULL DEFAULT 'html',
   source_code TEXT NOT NULL DEFAULT '',
   filename TEXT NOT NULL,
+  title TEXT NOT NULL DEFAULT '',
   reflection TEXT NOT NULL DEFAULT '',
   aesthetic_used TEXT NOT NULL DEFAULT '[]',
   release_name TEXT NOT NULL DEFAULT '',

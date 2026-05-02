@@ -27,6 +27,7 @@ export interface Artifact {
   render_format: string;
   source_code: string;
   filename: string;
+  title: string;
   reflection: string;
   aesthetic_used: string;
   release_name: string;
@@ -98,4 +99,15 @@ export function getSkillByName(name: string): InventedSkill | undefined {
   return getDb()
     .prepare("SELECT * FROM invented_skills WHERE name = ?")
     .get(name) as InventedSkill | undefined;
+}
+
+export function getAllMemorySnapshots(): (MemorySnapshot & { date: string; tag: string })[] {
+  return getDb()
+    .prepare(`
+      SELECT ms.*, a.date, a.tag
+      FROM memory_snapshots ms
+      JOIN artifacts a ON ms.artifact_id = a.id
+      ORDER BY a.date ASC
+    `)
+    .all() as (MemorySnapshot & { date: string; tag: string })[];
 }

@@ -25,10 +25,11 @@ def generate(release):
     lines.append("")
 
     if stats:
+        stat_max = max(stats.values()) or 1
         lines.append("  ┌─ RELEASE STATISTICS ─────────────────────────────────────────────┐")
         for k, v in stats.items():
             label = k.replace("_", " ").upper()
-            bar_len = min(40, max(1, int(v / max(stats.values()) * 40)))
+            bar_len = min(40, max(1, int(v / stat_max * 40)))
             bar = "█" * bar_len + "░" * (40 - bar_len)
             lines.append(f"  │ {label:<18s} {bar} {v:>6,d} │")
         lines.append("  └─────────────────────────────────────────────────────────────────┘")

@@ -4,10 +4,10 @@
   "total_artifacts": 11,
   "artifacts": [
     {
-      "id": "3ff8a6d34dd2",
+      "id": "b1b65a42b195",
       "tag": "v2026.3.12",
-      "type": "system_alert",
-      "title": "System Alert \u2014 v2026.3.12",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.2.0 (2026.3.12)",
       "date": "2026-03-12T10:07:34Z",
       "release_name": "Hermes Agent v0.2.0 (2026.3.12)",
       "themes": [
@@ -20,14 +20,14 @@
         "commits": 4,
         "contributors": 63
       },
-      "filename": "v2026-3-12_system_alert.html",
-      "file_size": 19182
+      "filename": "v2026-3-12_layered_composition.html",
+      "file_size": 16286
     },
     {
-      "id": "4a2bb6c3fbf3",
+      "id": "dc43cf9a9e3c",
       "tag": "v2026.3.17",
-      "type": "index_of",
-      "title": "Index of /v2026.3.17/",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.3.0 (v2026.3.17)",
       "date": "2026-03-17T07:56:07Z",
       "release_name": "Hermes Agent v0.3.0 (v2026.3.17)",
       "themes": [
@@ -39,14 +39,14 @@
         "growth"
       ],
       "stats": {},
-      "filename": "v2026-3-17_index_of.html",
-      "file_size": 75556
+      "filename": "v2026-3-17_layered_composition.html",
+      "file_size": 40968
     },
     {
-      "id": "13d86f27c641",
+      "id": "6dcd8ec49c34",
       "tag": "v2026.3.23",
-      "type": "network_topology",
-      "title": "Topology: v2026.3.23",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.4.0 (v2026.3.23)",
       "date": "2026-03-24T05:34:23Z",
       "release_name": "Hermes Agent v0.4.0 (v2026.3.23)",
       "themes": [
@@ -57,14 +57,14 @@
         "growth"
       ],
       "stats": {},
-      "filename": "v2026-3-23_network_topology.html",
-      "file_size": 30932
+      "filename": "v2026-3-23_layered_composition.html",
+      "file_size": 40566
     },
     {
-      "id": "ac79cca16d99",
+      "id": "479735588da4",
       "tag": "v2026.3.28",
-      "type": "heat_grid",
-      "title": "Churn Map [v2026.3.28]",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.5.0 (v2026.3.28)",
       "date": "2026-03-28T20:12:05Z",
       "release_name": "Hermes Agent v0.5.0 (v2026.3.28)",
       "themes": [
@@ -75,14 +75,14 @@
         "growth"
       ],
       "stats": {},
-      "filename": "v2026-3-28_heat_grid.html",
-      "file_size": 74160
+      "filename": "v2026-3-28_layered_composition.html",
+      "file_size": 40042
     },
     {
-      "id": "ffe732fe7338",
+      "id": "5a35c6b65e2a",
       "tag": "v2026.3.30",
-      "type": "terminal_archaeology",
-      "title": "term://hermes@v2026.3.30",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.6.0 (v2026.3.30)",
       "date": "2026-03-30T15:30:14Z",
       "release_name": "Hermes Agent v0.6.0 (v2026.3.30)",
       "themes": [
@@ -95,14 +95,14 @@
       "stats": {
         "resolved_issues": 16
       },
-      "filename": "v2026-3-30_terminal_archaeology.html",
-      "file_size": 8178
+      "filename": "v2026-3-30_layered_composition.html",
+      "file_size": 35527
     },
     {
-      "id": "7f4135d1ed31",
+      "id": "83faae406e35",
       "tag": "v2026.4.3",
-      "type": "petri_culture",
-      "title": "Culture #v2026.4.3",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.7.0 (v2026.4.3)",
       "date": "2026-04-03T18:15:29Z",
       "release_name": "Hermes Agent v0.7.0 (v2026.4.3)",
       "themes": [
@@ -116,14 +116,14 @@
         "commits": 135,
         "resolved_issues": 46
       },
-      "filename": "v2026-4-3_petri_culture.html",
-      "file_size": 7583
+      "filename": "v2026-4-3_layered_composition.html",
+      "file_size": 43878
     },
     {
-      "id": "a429fb421bb4",
+      "id": "04efa301af44",
       "tag": "v2026.4.8",
-      "type": "index_of",
-      "title": "Index of /v2026.4.8/",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.8.0 (v2026.4.8)",
       "date": "2026-04-08T11:56:44Z",
       "release_name": "Hermes Agent v0.8.0 (v2026.4.8)",
       "themes": [
@@ -138,14 +138,14 @@
         "merged_prs": 209,
         "resolved_issues": 82
       },
-      "filename": "v2026-4-8_index_of.html",
-      "file_size": 75488
+      "filename": "v2026-4-8_layered_composition.html",
+      "file_size": 41819
     },
     {
-      "id": "beadd6a9dae3",
+      "id": "2840a9fd2032",
       "tag": "v2026.4.13",
-      "type": "system_alert",
-      "title": "System Alert \u2014 v2026.4.13",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.9.0 (v2026.4.13)",
       "date": "2026-04-13T18:52:41Z",
       "release_name": "Hermes Agent v0.9.0 (v2026.4.13)",
       "themes": [
@@ -163,14 +163,14 @@
         "contributors": 24,
         "resolved_issues": 167
       },
-      "filename": "v2026-4-13_system_alert.html",
-      "file_size": 19160
+      "filename": "v2026-4-13_layered_composition.html",
+      "file_size": 39827
     },
     {
-      "id": "452ae96d4707",
+      "id": "ae439ea4a54a",
       "tag": "v2026.4.16",
-      "type": "heat_grid",
-      "title": "Churn Map [v2026.4.16]",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.10.0 (2026.4.16)",
       "date": "2026-04-16T19:53:25Z",
       "release_name": "Hermes Agent v0.10.0 (2026.4.16)",
       "themes": [
@@ -180,14 +180,14 @@
         "growth"
       ],
       "stats": {},
-      "filename": "v2026-4-16_heat_grid.html",
-      "file_size": 76713
+      "filename": "v2026-4-16_layered_composition.html",
+      "file_size": 40241
     },
     {
-      "id": "3ceab7ae77f4",
+      "id": "04558b3d53ea",
       "tag": "v2026.4.23",
-      "type": "network_topology",
-      "title": "Topology: v2026.4.23",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.11.0 (2026.4.23)",
       "date": "2026-04-23T22:32:13Z",
       "release_name": "Hermes Agent v0.11.0 (2026.4.23)",
       "themes": [
@@ -204,14 +204,14 @@
         "files_changed": 1314,
         "insertions": 224174
       },
-      "filename": "v2026-4-23_network_topology.html",
-      "file_size": 98381
+      "filename": "v2026-4-23_layered_composition.html",
+      "file_size": 42870
     },
     {
-      "id": "f288de1198c9",
+      "id": "59b0a54fc4ce",
       "tag": "v2026.4.30",
-      "type": "terminal_archaeology",
-      "title": "term://hermes@v2026.4.30",
+      "type": "layered_composition",
+      "title": "Hermes Agent v0.12.0 (2026.4.30)",
       "date": "2026-04-30T18:31:21Z",
       "release_name": "Hermes Agent v0.12.0 (2026.4.30)",
       "themes": [
@@ -228,8 +228,8 @@
         "files_changed": 1270,
         "insertions": 217776
       },
-      "filename": "v2026-4-30_terminal_archaeology.html",
-      "file_size": 8700
+      "filename": "v2026-4-30_layered_composition.html",
+      "file_size": 40109
     }
   ]
 }

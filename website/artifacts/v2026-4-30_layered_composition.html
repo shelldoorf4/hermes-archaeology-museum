@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="hermes-archaeology-museum">
+    <meta name="artifact-type" content="layered_composition">
+    <meta name="release-tag" content="v2026.4.30">
+    <title>Hermes Archaeology — v2026.4.30</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { -webkit-font-smoothing: antialiased; }
+body{margin:0;overflow:hidden;background:#f5f5dc;display:flex;align-items:center;justify-content:center}
+    </style>
+</head>
+<body>
+<canvas id="c" style="width:100%;height:100vh;display:block;background:#f5f5dc"></canvas>
+<script>(function(){
+var W=1200,H=900,seed=3727583539;
+var c=document.getElementById('c');
+c.width=W;c.height=H;
+var x=c.getContext('2d');
+var bg='#f5f5dc',fg='#222222';
+var acc=["#8b0000", "#006400", "#00008b", "#8b8b00", "#8b4513", "#2f4f4f"];
+var files=[{"n": ".dockerignore", "a": 2, "d": 0, "c": 2, "t": 0.001}, {"n": ".env.example", "a": 16, "d": 0, "c": 16, "t": 0.01}, {"n": ".github/actions/nix-setup/action.yml", "a": 12, "d": 2, "c": 14, "t": 0.008}, {"n": ".github/workflows/deploy-site.yml", "a": 3, "d": 0, "c": 3, "t": 0.002}, {"n": ".github/workflows/docs-site-checks.yml", "a": 3, "d": 0, "c": 3, "t": 0.002}, {"n": ".github/workflows/nix-lockfile-check.yml", "a": 0, "d": 68, "c": 68, "t": 0.041}, {"n": ".github/workflows/nix-lockfile-fix.yml", "a": 108, "d": 3, "c": 111, "t": 0.067}, {"n": ".github/workflows/nix.yml", "a": 84, "d": 0, "c": 84, "t": 0.051}, {"n": ".gitignore", "a": 1, "d": 0, "c": 1, "t": 0.001}, {"n": "AGENTS.md", "a": 14, "d": 1, "c": 15, "t": 0.009}, {"n": "CONTRIBUTING.md", "a": 1, "d": 1, "c": 2, "t": 0.001}, {"n": "Dockerfile", "a": 24, "d": 6, "c": 30, "t": 0.018}, {"n": "RELEASE_v0.12.0.md", "a": 505, "d": 0, "c": 505, "t": 0.304}, {"n": "acp_adapter/entry.py", "a": 11, "d": 0, "c": 11, "t": 0.007}, {"n": "acp_adapter/server.py", "a": 181, "d": 10, "c": 191, "t": 0.115}, {"n": "acp_adapter/session.py", "a": 28, "d": 1, "c": 29, "t": 0.017}, {"n": "agent/anthropic_adapter.py", "a": 355, "d": 35, "c": 390, "t": 0.235}, {"n": "agent/auxiliary_client.py", "a": 811, "d": 101, "c": 912, "t": 0.548}, {"n": "agent/bedrock_adapter.py", "a": 171, "d": 5, "c": 176, "t": 0.106}, {"n": "agent/codex_responses_adapter.py", "a": 197, "d": 11, "c": 208, "t": 0.125}, {"n": "agent/context_compressor.py", "a": 143, "d": 5, "c": 148, "t": 0.089}, {"n": "agent/context_engine.py", "a": 22, "d": 0, "c": 22, "t": 0.013}, {"n": "agent/copilot_acp_client.py", "a": 43, "d": 1, "c": 44, "t": 0.026}, {"n": "agent/credential_pool.py", "a": 232, "d": 7, "c": 239, "t": 0.144}, {"n": "agent/credential_sources.py", "a": 18, "d": 1, "c": 19, "t": 0.011}, {"n": "agent/curator.py", "a": 1315, "d": 0, "c": 1315, "t": 0.791}, {"n": "agent/error_classifier.py", "a": 107, "d": 0, "c": 107, "t": 0.064}, {"n": "agent/gemini_cloudcode_adapter.py", "a": 0, "d": 2, "c": 2, "t": 0.001}, {"n": "agent/gemini_native_adapter.py", "a": 104, "d": 0, "c": 104, "t": 0.063}, {"n": "agent/gemini_schema.py", "a": 15, "d": 1, "c": 16, "t": 0.01}, {"n": "agent/google_code_assist.py", "a": 0, "d": 1, "c": 1, "t": 0.001}, {"n": "agent/google_oauth.py", "a": 3, "d": 3, "c": 6, "t": 0.004}, {"n": "agent/image_routing.py", "a": 236, "d": 0, "c": 236, "t": 0.142}, {"n": "agent/lmstudio_reasoning.py", "a": 48, "d": 0, "c": 48, "t": 0.029}, {"n": "agent/memory_manager.py", "a": 191, "d": 7, "c": 198, "t": 0.119}, {"n": "agent/memory_provider.py", "a": 52, "d": 3, "c": 55, "t": 0.033}, {"n": "agent/model_metadata.py", "a": 303, "d": 54, "c": 357, "t": 0.215}, {"n": "agent/models_dev.py", "a": 1, "d": 0, "c": 1, "t": 0.001}, {"n": "agent/moonshot_schema.py", "a": 190, "d": 0, "c": 190, "t": 0.114}, {"n": "agent/nous_rate_guard.py", "a": 144, "d": 1, "c": 145, "t": 0.087}, {"n": "agent/onboarding.py", "a": 193, "d": 0, "c": 193, "t": 0.116}, {"n": "agent/prompt_builder.py", "a": 38, "d": 0, "c": 38, "t": 0.023}, {"n": "agent/redact.py", "a": 62, "d": 8, "c": 70, "t": 0.042}, {"n": "agent/shell_hooks.py", "a": 7, "d": 2, "c": 9, "t": 0.005}, {"n": "agent/skill_commands.py", "a": 94, "d": 136, "c": 230, "t": 0.138}, {"n": "agent/skill_preprocessing.py", "a": 131, "d": 0, "c": 131, "t": 0.079}, {"n": "agent/skill_utils.py", "a": 11, "d": 3, "c": 14, "t": 0.008}, {"n": "agent/title_generator.py", "a": 39, "d": 5, "c": 44, "t": 0.026}, {"n": "agent/transports/__init__.py", "a": 7, "d": 2, "c": 9, "t": 0.005}, {"n": "agent/transports/anthropic.py", "a": 2, "d": 0, "c": 2, "t": 0.001}, {"n": "agent/transports/chat_completions.py", "a": 149, "d": 7, "c": 156, "t": 0.094}, {"n": "agent/transports/codex.py", "a": 21, "d": 3, "c": 24, "t": 0.014}, {"n": "agent/transports/types.py", "a": 6, "d": 1, "c": 7, "t": 0.004}, {"n": "agent/usage_pricing.py", "a": 21, "d": 0, "c": 21, "t": 0.013}, {"n": "batch_runner.py", "a": 2, "d": 6, "c": 8, "t": 0.005}, {"n": "cli-config.yaml.example", "a": 61, "d": 18, "c": 79, "t": 0.048}, {"n": "cli.py", "a": 1150, "d": 513, "c": 1663, "t": 1.0}, {"n": "cron/jobs.py", "a": 108, "d": 7, "c": 115, "t": 0.069}, {"n": "cron/scheduler.py", "a": 293, "d": 54, "c": 347, "t": 0.209}, {"n": "docker-compose.yml", "a": 59, "d": 0, "c": 59, "t": 0.035}, {"n": "docker/entrypoint.sh", "a": 20, "d": 9, "c": 29, "t": 0.017}, {"n": "flake.nix", "a": 1, "d": 0, "c": 1, "t": 0.001}, {"n": "gateway/builtin_hooks/boot_md.py", "a": 0, "d": 85, "c": 85, "t": 0.051}, {"n": "gateway/channel_directory.py", "a": 77, "d": 14, "c": 91, "t": 0.055}, {"n": "gateway/config.py", "a": 277, "d": 58, "c": 335, "t": 0.201}, {"n": "gateway/display_config.py", "a": 3, "d": 1, "c": 4, "t": 0.002}, {"n": "gateway/hooks.py", "a": 23, "d": 16, "c": 39, "t": 0.023}, {"n": "gateway/mirror.py", "a": 57, "d": 11, "c": 68, "t": 0.041}, {"n": "gateway/pairing.py", "a": 2, "d": 1, "c": 3, "t": 0.002}, {"n": "gateway/platform_registry.py", "a": 212, "d": 0, "c": 212, "t": 0.127}, {"n": "gateway/platforms/ADDING_A_PLATFORM.md", "a": 25, "d": 4, "c": 29, "t": 0.017}, {"n": "gateway/platforms/__init__.py", "a": 2, "d": 0, "c": 2, "t": 0.001}, {"n": "gateway/platforms/api_server.py", "a": 359, "d": 71, "c": 430, "t": 0.259}, {"n": "gateway/platforms/base.py", "a": 646, "d": 103, "c": 749, "t": 0.45}, {"n": "gateway/platforms/bluebubbles.py", "a": 19, "d": 2, "c": 21, "t": 0.013}, {"n": "gateway/platforms/discord.py", "a": 312, "d": 35, "c": 347, "t": 0.209}, {"n": "gateway/platforms/email.py", "a": 111, "d": 1, "c": 112, "t": 0.067}, {"n": "gateway/platforms/feishu_comment.py", "a": 0, "d": 1, "c": 1, "t": 0.001}, {"n": "gateway/platforms/helpers.py", "a": 11, "d": 2, "c": 13, "t": 0.008}, {"n": "gateway/platforms/matrix.py", "a": 507, "d": 47, "c": 554, "t": 0.333}, {"n": "gateway/platforms/mattermost.py", "a": 95, "d": 2, "c": 97, "t": 0.058}, {"n": "gateway/platforms/qqbot/adapter.py", "a": 25, "d": 7, "c": 32, "t": 0.019}, {"n": "gateway/platforms/signal.py", "a": 490, "d": 12, "c": 502, "t": 0.302}, {"n": "gateway/platforms/signal_rate_limit.py", "a": 369, "d": 0, "c": 369, "t": 0.222}, {"n": "gateway/platforms/slack.py", "a": 1029, "d": 70, "c": 1099, "t": 0.661}, {"n": "gateway/platforms/telegram.py", "a": 385, "d": 31, "c": 416, "t": 0.25}, {"n": "gateway/platforms/telegram_network.py", "a": 3, "d": 3, "c": 6, "t": 0.004}, {"n": "gateway/platforms/webhook.py", "a": 16, "d": 20, "c": 36, "t": 0.022}, {"n": "gateway/platforms/weixin.py", "a": 53, "d": 5, "c": 58, "t": 0.035}, {"n": "gateway/platforms/yuanbao.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/platforms/yuanbao_media.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/platforms/yuanbao_proto.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/platforms/yuanbao_sticker.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/run.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/runtime_footer.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/session.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/stream_consumer.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "gateway/whatsapp_identity.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/_parser.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/auth.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/auth_commands.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/azure_detect.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/backup.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/banner.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/browser_connect.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/claw.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/commands.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/copilot_auth.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/cron.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/curator.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/debug.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/dingtalk_auth.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/doctor.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/dump.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/env_loader.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/fallback_cmd.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/gateway.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/hooks.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/main.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/mcp_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/model_catalog.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/model_normalize.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/model_switch.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/models.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/nous_subscription.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/oneshot.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/platforms.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/plugins.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/plugins_cmd.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/profiles.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/providers.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/pty_bridge.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/relaunch.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/runtime_provider.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/setup.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/skills_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/skills_hub.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/skin_engine.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/slack_cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/status.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/timeouts.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/tips.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/tools_config.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/vercel_auth.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/voice.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/web_server.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_cli/webhook.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_logging.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "hermes_state.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "model_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/checks.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/devShell.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/hermes-agent.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/lib.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/nixosModules.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/overlays.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/packages.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/python.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/tui.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "nix/web.nix", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/migration/openclaw-migration/scripts/openclaw_to_hermes.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/example-dashboard/dashboard/dist/index.js", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/example-dashboard/dashboard/manifest.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/README.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/audio_bridge.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/meet_bot.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/node/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/node/cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/node/client.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/node/protocol.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/node/registry.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/node/server.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/plugin.yaml", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/process_manager.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/realtime/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/realtime/openai_client.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/google_meet/tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/LICENSE", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/README.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/dashboard/dist/index.js", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/dashboard/dist/style.css", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/dashboard/manifest.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/dashboard/plugin_api.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/docs/achievements-performance-implementation-plan.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/docs/achievements-performance-implementation-spec.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/docs/achievements-performance-spec.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/docs/assets/achievements-dashboard-hd.png", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/docs/assets/achievements-tier-showcase-hd.png", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/hermes-achievements/tests/test_achievement_engine.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/hindsight/README.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/hindsight/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/holographic/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/honcho/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/honcho/cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/honcho/client.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/honcho/session.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/memory/openviking/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/observability/langfuse/README.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/observability/langfuse/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/observability/langfuse/plugin.yaml", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/platforms/irc/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/platforms/irc/adapter.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/platforms/irc/plugin.yaml", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/platforms/teams/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/platforms/teams/adapter.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/platforms/teams/plugin.yaml", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/spotify/__init__.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/spotify/client.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/spotify/plugin.yaml", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "plugins/spotify/tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "pyproject.toml", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "rl_cli.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "run_agent.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "scripts/build_model_catalog.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "scripts/install.sh", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "scripts/profile-tui.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "scripts/release.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/apple/apple-notes/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/apple/apple-reminders/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/apple/findmy/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/autonomous-ai-agents/claude-code/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/autonomous-ai-agents/codex/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/autonomous-ai-agents/hermes-agent/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/autonomous-ai-agents/opencode/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/architecture-diagram/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-art/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/ascii-video/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/baoyu-comic/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/baoyu-infographic/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/claude-design/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/references/official-cli.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/references/rest-api.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/references/workflow-format.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/_common.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/auto_fix_deps.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/check_deps.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/comfyui_setup.sh", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/extract_schema.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/fetch_logs.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/hardware_check.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/health_check.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/run_batch.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/run_workflow.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/scripts/ws_monitor.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/README.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/conftest.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/pytest.ini", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/test_check_deps.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/test_cloud_integration.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/test_common.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/test_extract_schema.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/tests/test_run_workflow.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/README.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/animatediff_video.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/flux_dev_txt2img.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/sd15_txt2img.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/sdxl_img2img.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/sdxl_inpaint.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/sdxl_txt2img.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/upscale_4x.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/comfyui/workflows/wan_video_t2v.json", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/creative-ideation/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/design-md/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/design-md/templates/starter.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/excalidraw/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/humanizer/LICENSE", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/humanizer/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/manim-video/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/p5js/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/pixel-art/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/popular-web-designs/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/pretext/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/pretext/references/patterns.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/pretext/templates/donut-orbit.html", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/pretext/templates/hello-orb-flow.html", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/sketch/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/songwriting-and-ai-music/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/3d-scene.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/animation.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/audio-reactive.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/dat-scripting.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/external-data.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/geometry-comp.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/glsl.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/layout-compositor.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/mcp-tools.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/midi-osc.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/network-patterns.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/operator-tips.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/operators.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/panel-ui.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "skills/creative/touchdesigner-mcp/references/particles.md", "a": 0, "d": 0, "c": 0, "t": 0.0}];
+var dirs=[{"name": "root", "count": 18, "churn": 2381}, {"name": ".github", "count": 6, "churn": 283}, {"name": "acp_adapter", "count": 3, "churn": 231}, {"name": "agent", "count": 38, "churn": 5887}, {"name": "cron", "count": 2, "churn": 462}, {"name": "docker", "count": 1, "churn": 29}, {"name": "gateway", "count": 36, "churn": 5710}, {"name": "hermes_cli", "count": 51, "churn": 0}, {"name": "nix", "count": 10, "churn": 0}, {"name": "optional-skills", "count": 1, "churn": 0}, {"name": "plugins", "count": 53, "churn": 0}, {"name": "scripts", "count": 4, "churn": 0}, {"name": "skills", "count": 77, "churn": 0}];
+var grid=[[0, 0, 770, 235], [770, 0, 430, 235], [0, 235, 1200, 81], [0, 316, 1200, 28], [0, 344, 1200, 205], [0, 549, 410, 89], [410, 549, 790, 89], [0, 638, 1200, 14], [0, 652, 1200, 39], [0, 691, 138, 209], [138, 691, 199, 209], [337, 691, 863, 209]];
+var tblocks=[{"type": "index", "lines": [".dockerignore                                        1308", ".env.example                                         2253", ".github/actions/nix-setup/action.yml                 9841", ".github/workflows/deploy-site.yml                    7082", ".github/workflows/docs-site-checks.yml               1217", ".github/workflows/nix-lockfile-check.yml              432", ".github/workflows/nix-lockfile-fix.yml               2915", ".github/workflows/nix.yml                            1373", ".gitignore                                           7115", "AGENTS.md                                            6478", "CONTRIBUTING.md                                      4118", "Dockerfile                                           6280", "RELEASE_v0.12.0.md                                   5250", "acp_adapter/entry.py                                  950", "acp_adapter/server.py                                5520", "acp_adapter/session.py                                701", "agent/anthropic_adapter.py                           6675", "agent/auxiliary_client.py                            9114", "agent/bedrock_adapter.py                             9483", "agent/codex_responses_adapter.py                     2942", "agent/context_compressor.py                          4110", "agent/context_engine.py                              4039", "agent/copilot_acp_client.py                          5667", "agent/credential_pool.py                             3650", "agent/credential_sources.py                          4362", "agent/curator.py                                     1055", "agent/error_classifier.py                            2450", "agent/gemini_cloudcode_adapter.py                    2642", "agent/gemini_native_adapter.py                       5706", "agent/gemini_schema.py                               9908", "agent/google_code_assist.py                          9341", "agent/google_oauth.py                                3796", "agent/image_routing.py                               1682", "agent/lmstudio_reasoning.py                           485", "agent/memory_manager.py                              4129", "agent/memory_provider.py                             3158", "agent/model_metadata.py                              2960", "agent/models_dev.py                                  6642", "agent/moonshot_schema.py                             5243", "agent/nous_rate_guard.py                             2092", "agent/onboarding.py                                  8586", "agent/prompt_builder.py                              6146", "agent/redact.py                                      9791", "agent/shell_hooks.py                                 7172", "agent/skill_commands.py                              1051", "agent/skill_preprocessing.py                         2187", "agent/skill_utils.py                                  928", "agent/title_generator.py                             8512", "agent/transports/__init__.py                         4753", "agent/transports/anthropic.py                        7634", "agent/transports/chat_completions.py                 5741", "agent/transports/codex.py                            9016", "agent/transports/types.py                            7452", "agent/usage_pricing.py                               8895", "batch_runner.py                                      1586", "cli-config.yaml.example                              1789", "cli.py                                               7586", "cron/jobs.py                                         9915", "cron/scheduler.py                                    1916", "docker-compose.yml                                   8358", "docker/entrypoint.sh                                 4685", "flake.nix                                            7333", "gateway/builtin_hooks/boot_md.py                     1020", "gateway/channel_directory.py                          295", "gateway/config.py                                    5594", "gateway/display_config.py                            5276", "gateway/hooks.py                                     8529", "gateway/mirror.py                                    6307", "gateway/pairing.py                                   4449", "gateway/platform_registry.py                         8456", "gateway/platforms/ADDING_A_PLATFORM.md               8865", "gateway/platforms/__init__.py                        3908", "gateway/platforms/api_server.py                      8764", "gateway/platforms/base.py                            1026", "gateway/platforms/bluebubbles.py                     9277", "gateway/platforms/discord.py                         7717", "gateway/platforms/email.py                           4725", "gateway/platforms/feishu_comment.py                  6399", "gateway/platforms/helpers.py                         3173", "gateway/platforms/matrix.py                          8350"]}, {"type": "log", "lines": ["  chore: release v0.12.0 (2026.4.30) (#18057)", "  fix(agent): extend thinking-mode reasoning_content pad to Kimi/Moonshot", "  fix(deepseek): preserve v4 reasoning_content on replay", "  Merge pull request #18043 from NousResearch/feat/help-ui", "  test(acp): accept prompt persistence kwargs in mocks", "  feat(curator): show most-used and least-used skills in `hermes curator status` (", "  feat(tui): add a mini help menu when u write ? in the input field", "  fix: use skill activity in curator status", "  fix(curator): scan nested archive subdirs in restore_skill", "  chore(author-map): add y0shua1ee and 0xDevNinja for curator PRs (#18031)", "  feat(curator): split archived into consolidated vs pruned with model + heuristic", "  fix(acp): advertise and forward image prompts", "  Merge pull request #18029 from NousResearch/bb/tui-max-iterations-salvage", "  fix(tui): respect max turns config", "  Merge pull request #17969 from stephenschoettler/fix/current-main-test-regressio", "  change(nix): dedupe nix lockfile checking scripts in ci (#18000)", "  fix(auxiliary): pass raw base_url to _maybe_wrap_anthropic for correct transport", "  Merge pull request #18024 from NousResearch/bb/mouse-mode-fast-path", "  fix(cli): tighten terminal leak fast path", "  Merge pull request #17701 from NousResearch/bb/mouse-mode-self-heal"]}, {"type": "diff", "lines": ["+ acp_adapter/entry.py  (+11/-0)", "+ acp_adapter/server.py  (+181/-10)", "+ acp_adapter/session.py  (+28/-1)", "+ agent/anthropic_adapter.py  (+355/-35)", "+ agent/auxiliary_client.py  (+811/-101)", "+ agent/bedrock_adapter.py  (+171/-5)", "+ agent/codex_responses_adapter.py  (+197/-11)", "+ agent/context_compressor.py  (+143/-5)", "+ agent/context_engine.py  (+22/-0)", "+ agent/copilot_acp_client.py  (+43/-1)", "+ agent/credential_pool.py  (+232/-7)", "+ agent/credential_sources.py  (+18/-1)", "+ agent/curator.py  (+1315/-0)", "+ agent/error_classifier.py  (+107/-0)", "+ agent/gemini_cloudcode_adapter.py  (+0/-2)", "+ agent/gemini_native_adapter.py  (+104/-0)", "+ agent/gemini_schema.py  (+15/-1)"]}, {"type": "stats", "lines": ["commits: 1096", "merged_prs: 550", "files_changed: 1270", "insertions: 217776", "root/  18 files  2381 changes", ".github/  6 files  283 changes", "acp_adapter/  3 files  231 changes", "agent/  38 files  5887 changes", "cron/  2 files  462 changes", "docker/  1 files  29 changes", "gateway/  36 files  5710 changes", "hermes_cli/  51 files  0 changes", "nix/  10 files  0 changes", "optional-skills/  1 files  0 changes"]}];
+var commits=["chore: release v0.12.0 (2026.4.30) (#18057)", "fix(agent): extend thinking-mode reasoning_content pad to Kimi/Moonshot", "fix(deepseek): preserve v4 reasoning_content on replay", "Merge pull request #18043 from NousResearch/feat/help-ui", "test(acp): accept prompt persistence kwargs in mocks", "feat(curator): show most-used and least-used skills in `hermes curator status` (", "feat(tui): add a mini help menu when u write ? in the input field", "fix: use skill activity in curator status", "fix(curator): scan nested archive subdirs in restore_skill", "chore(author-map): add y0shua1ee and 0xDevNinja for curator PRs (#18031)", "feat(curator): split archived into consolidated vs pruned with model + heuristic", "fix(acp): advertise and forward image prompts", "Merge pull request #18029 from NousResearch/bb/tui-max-iterations-salvage", "fix(tui): respect max turns config", "Merge pull request #17969 from stephenschoettler/fix/current-main-test-regressio", "change(nix): dedupe nix lockfile checking scripts in ci (#18000)", "fix(auxiliary): pass raw base_url to _maybe_wrap_anthropic for correct transport", "Merge pull request #18024 from NousResearch/bb/mouse-mode-fast-path", "fix(cli): tighten terminal leak fast path", "Merge pull request #17701 from NousResearch/bb/mouse-mode-self-heal", "fix(tui): reset extended keyboard modes", "fix(ci): stabilize current main test regressions", "fix(nix): replace magic-nix-cache with Cachix (#17928)", "fix(skills): also bump_use on skill_view tool invocation", "fix(skills): wire bump_use() into skill invocation and preload paths (#17782)", "test(gateway): pin cleanup invariants for #17758 in-band drain hand-off", "fix(skills): also exclude .archive in skills_tool + add author map entry", "fix(skills): exclude .archive from skill index walk", "fix(curator): seed defaults on update, create logs/curator dir, defer fire impor", "fix(gateway): persist user message on transient agent failures (#7100)"];
+
+var _s=seed;
+function R(){_s=(_s*16807)%2147483647;return(_s&0x7fffffff)/2147483647;}
+
+// Fill bg
+x.fillStyle=bg;
+x.fillRect(0,0,W,H);
+
+// LAYER 1: Dense colored block grid
+for(var i=0;i<grid.length;i++){
+  var g=grid[i],gx=g[0],gy=g[1],gw=g[2],gh=g[3];
+  var fi=i%Math.max(files.length,1);
+  var f=files.length?files[fi]:{t:0.5,a:10,d:5,c:15};
+  var col=acc[i%acc.length];
+  var t=f.t;
+
+  // Cell fill: dense small blocks
+  var bs=Math.max(2,Math.round(3+R()*5));
+  for(var by=gy;by<gy+gh;by+=bs){
+    for(var bx=gx;bx<gx+gw;bx+=bs){
+      var pick=R();
+      if(pick<t*0.7){
+        x.fillStyle=col;
+        x.globalAlpha=0.4+R()*0.6;
+      } else if(pick<t*0.7+0.15){
+        x.fillStyle=acc[Math.floor(R()*acc.length)];
+        x.globalAlpha=0.2+R()*0.5;
+      } else {
+        x.fillStyle=bg;
+        x.globalAlpha=0.6+R()*0.4;
+      }
+      x.fillRect(Math.round(bx),Math.round(by),bs,bs);
+    }
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 2: Grid borders
+x.strokeStyle=fg;
+x.globalAlpha=0.15;
+x.lineWidth=1;
+for(var i=0;i<grid.length;i++){
+  var g=grid[i];
+  x.strokeRect(g[0],g[1],g[2],g[3]);
+}
+x.globalAlpha=1;
+
+// LAYER 3: Horizontal color bands (pixel sort effect)
+var nBands=3+Math.round(R()*5);
+for(var b=0;b<nBands;b++){
+  var by=Math.round(R()*H*0.9);
+  var bh=Math.max(4,Math.round(R()*30));
+  var col1=acc[Math.floor(R()*acc.length)];
+  var col2=acc[Math.floor(R()*acc.length)];
+  var startX=Math.round(R()*W*0.3);
+  var endX=Math.round(startX+W*0.3+R()*W*0.4);
+
+  for(var bx=startX;bx<endX;bx+=2){
+    var t2=(bx-startX)/(endX-startX);
+    x.fillStyle=t2<0.5?col1:col2;
+    x.globalAlpha=0.3+R()*0.4;
+    x.fillRect(bx,by,2,bh);
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 4: Overlay panels with text content
+var panels=[];
+for(var ti=0;ti<tblocks.length;ti++){
+  var tb=tblocks[ti];
+  var px=Math.round(R()*W*0.5);
+  var py=Math.round(R()*H*0.5);
+  var pw=Math.round(200+R()*500);
+  var ph=Math.round(150+R()*400);
+  panels.push({x:px,y:py,w:pw,h:ph,tb:tb});
+}
+
+// Draw panels
+for(var pi=0;pi<panels.length;pi++){
+  var p=panels[pi];
+  var panelBg=R()<0.5?bg:acc[Math.floor(R()*acc.length)];
+  x.fillStyle=panelBg;
+  x.globalAlpha=0.7+R()*0.3;
+  x.fillRect(p.x,p.y,p.w,p.h);
+
+  // Panel border
+  x.strokeStyle=fg;
+  x.globalAlpha=0.3;
+  x.lineWidth=1;
+  x.strokeRect(p.x,p.y,p.w,p.h);
+
+  // Text content
+  x.globalAlpha=0.7+R()*0.3;
+  x.fillStyle=fg;
+  var fontSize=Math.round(8+R()*4);
+  x.font=fontSize+'px monospace';
+  var lines=p.tb.lines||[];
+  var ly=p.y+fontSize+4;
+  for(var li=0;li<lines.length&&ly<p.y+p.h-4;li++){
+    var line=lines[li];
+    if(line.length>Math.floor(p.w/(fontSize*0.6))){
+      line=line.substring(0,Math.floor(p.w/(fontSize*0.6)));
+    }
+    x.fillText(line,p.x+6,ly);
+    ly+=fontSize+2;
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 5: Large accent rectangles (bold color blocks like the reference)
+var nBlocks=2+Math.round(R()*4);
+for(var i=0;i<nBlocks;i++){
+  var bx2=Math.round(R()*W*0.7);
+  var by2=Math.round(R()*H*0.7);
+  var bw2=Math.round(80+R()*300);
+  var bh2=Math.round(60+R()*200);
+  x.fillStyle=acc[Math.floor(R()*acc.length)];
+  x.globalAlpha=0.15+R()*0.35;
+  x.fillRect(bx2,by2,bw2,bh2);
+}
+x.globalAlpha=1;
+
+// LAYER 6: Scattered commit text at various sizes
+for(var i=0;i<commits.length;i++){
+  var tx=R()*W*0.85;
+  var ty=20+R()*H*0.9;
+  var ts=Math.round(7+R()*14);
+  x.font=ts+'px monospace';
+  x.fillStyle=R()<0.4?fg:acc[Math.floor(R()*acc.length)];
+  x.globalAlpha=0.08+R()*0.25;
+  x.fillText(commits[i],tx,ty);
+}
+x.globalAlpha=1;
+
+// LAYER 7: Filename waterfall (dense vertical text column)
+var colX=Math.round(R()*W*0.3);
+var colW=Math.round(200+R()*300);
+x.font='8px monospace';
+x.fillStyle=fg;
+x.globalAlpha=0.15;
+x.fillRect(colX,0,colW,H);
+x.globalAlpha=0.6;
+var fy=10;
+for(var i=0;i<files.length&&fy<H;i++){
+  var fn=files[i].n;
+  if(fn.length>Math.floor(colW/5))fn=fn.substring(0,Math.floor(colW/5));
+  x.fillStyle=files[i].t>0.5?acc[i%acc.length]:fg;
+  x.globalAlpha=0.3+files[i].t*0.5;
+  x.fillText(fn,colX+4,fy);
+  fy+=10;
+}
+x.globalAlpha=1;
+
+// LAYER 8: Directory labels (large, semi-transparent)
+for(var i=0;i<dirs.length&&i<8;i++){
+  var d=dirs[i];
+  var dx=Math.round(R()*W*0.7);
+  var dy=Math.round(R()*H*0.8)+40;
+  var ds=Math.round(18+R()*30);
+  x.font='bold '+ds+'px monospace';
+  x.fillStyle=acc[i%acc.length];
+  x.globalAlpha=0.08+R()*0.12;
+  x.fillText(d.name+'/',dx,dy);
+}
+x.globalAlpha=1;
+
+// LAYER 9: Pixel noise strips (glitch effect)
+var nStrips=5+Math.round(R()*10);
+for(var i=0;i<nStrips;i++){
+  var sy=Math.round(R()*H);
+  var sh=Math.max(1,Math.round(R()*4));
+  var sx=Math.round(R()*W*0.5);
+  var sw=Math.round(W*0.2+R()*W*0.5);
+  var sc=acc[Math.floor(R()*acc.length)];
+  x.fillStyle=sc;
+  x.globalAlpha=0.3+R()*0.5;
+  x.fillRect(sx,sy,sw,sh);
+}
+x.globalAlpha=1;
+
+// LAYER 10: Data stat overlay
+x.font='10px monospace';
+x.fillStyle=fg;
+x.globalAlpha=0.35;
+var sx2=W-200;
+var sy2=20;
+var statText=['v2026.4.30'];
+for(var i=0;i<dirs.length&&i<6;i++){
+  statText.push(dirs[i].name+'/  '+dirs[i].count+' files');
+}
+for(var i=0;i<statText.length;i++){
+  x.fillText(statText[i],sx2,sy2+i*14);
+}
+
+// Signature
+x.globalAlpha=0.3;
+x.font='9px monospace';
+x.fillText('v2026.4.30 — hermes archaeology',8,H-8);
+x.globalAlpha=1;
+
+})();</script>
+</body>
+</html>

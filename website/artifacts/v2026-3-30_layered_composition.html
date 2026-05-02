@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="hermes-archaeology-museum">
+    <meta name="artifact-type" content="layered_composition">
+    <meta name="release-tag" content="v2026.3.30">
+    <title>Hermes Archaeology — v2026.3.30</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { -webkit-font-smoothing: antialiased; }
+body{margin:0;overflow:hidden;background:#1a1a2e;display:flex;align-items:center;justify-content:center}
+    </style>
+</head>
+<body>
+<canvas id="c" style="width:100%;height:100vh;display:block;background:#1a1a2e"></canvas>
+<script>(function(){
+var W=1200,H=900,seed=3180101974;
+var c=document.getElementById('c');
+c.width=W;c.height=H;
+var x=c.getContext('2d');
+var bg='#1a1a2e',fg='#e0e0e0';
+var acc=["#e94560", "#0f3460", "#53a8b6", "#f5e6ca", "#ff6b6b", "#79c2d0"];
+var files=[{"n": ".dockerignore", "a": 13, "d": 0, "c": 13, "t": 0.004}, {"n": ".env.example", "a": 5, "d": 1, "c": 6, "t": 0.002}, {"n": ".github/workflows/docker-publish.yml", "a": 61, "d": 0, "c": 61, "t": 0.019}, {"n": "AGENTS.md", "a": 78, "d": 0, "c": 78, "t": 0.024}, {"n": "Dockerfile", "a": 20, "d": 0, "c": 20, "t": 0.006}, {"n": "RELEASE_v0.6.0.md", "a": 249, "d": 0, "c": 249, "t": 0.076}, {"n": "acp_adapter/entry.py", "a": 1, "d": 1, "c": 2, "t": 0.001}, {"n": "acp_adapter/server.py", "a": 46, "d": 3, "c": 49, "t": 0.015}, {"n": "agent/auxiliary_client.py", "a": 73, "d": 12, "c": 85, "t": 0.026}, {"n": "agent/context_compressor.py", "a": 2, "d": 2, "c": 4, "t": 0.001}, {"n": "agent/display.py", "a": 35, "d": 8, "c": 43, "t": 0.013}, {"n": "agent/model_metadata.py", "a": 1, "d": 0, "c": 1, "t": 0.0}, {"n": "agent/models_dev.py", "a": 4, "d": 4, "c": 8, "t": 0.002}, {"n": "agent/prompt_builder.py", "a": 59, "d": 1, "c": 60, "t": 0.018}, {"n": "agent/redact.py", "a": 3, "d": 0, "c": 3, "t": 0.001}, {"n": "agent/skill_commands.py", "a": 45, "d": 30, "c": 75, "t": 0.023}, {"n": "agent/skill_utils.py", "a": 67, "d": 0, "c": 67, "t": 0.021}, {"n": "agent/title_generator.py", "a": 1, "d": 1, "c": 2, "t": 0.001}, {"n": "cli-config.yaml.example", "a": 36, "d": 8, "c": 44, "t": 0.014}, {"n": "cli.py", "a": 207, "d": 79, "c": 286, "t": 0.088}, {"n": "cron/scheduler.py", "a": 48, "d": 17, "c": 65, "t": 0.02}, {"n": "docker/SOUL.md", "a": 15, "d": 0, "c": 15, "t": 0.005}, {"n": "docker/entrypoint.sh", "a": 34, "d": 0, "c": 34, "t": 0.01}, {"n": "environments/benchmarks/terminalbench_2/terminalbench2_env.py", "a": 446, "d": 3, "c": 449, "t": 0.138}, {"n": "gateway/builtin_hooks/__init__.py", "a": 1, "d": 0, "c": 1, "t": 0.0}, {"n": "gateway/builtin_hooks/boot_md.py", "a": 86, "d": 0, "c": 86, "t": 0.026}, {"n": "gateway/config.py", "a": 117, "d": 43, "c": 160, "t": 0.049}, {"n": "gateway/hooks.py", "a": 19, "d": 0, "c": 19, "t": 0.006}, {"n": "gateway/pairing.py", "a": 2, "d": 2, "c": 4, "t": 0.001}, {"n": "gateway/platforms/api_server.py", "a": 40, "d": 5, "c": 45, "t": 0.014}, {"n": "gateway/platforms/base.py", "a": 90, "d": 23, "c": 113, "t": 0.035}, {"n": "gateway/platforms/discord.py", "a": 88, "d": 12, "c": 100, "t": 0.031}, {"n": "gateway/platforms/email.py", "a": 103, "d": 56, "c": 159, "t": 0.049}, {"n": "gateway/platforms/feishu.py", "a": 3255, "d": 0, "c": 3255, "t": 1.0}, {"n": "gateway/platforms/matrix.py", "a": 58, "d": 9, "c": 67, "t": 0.021}, {"n": "gateway/platforms/mattermost.py", "a": 21, "d": 3, "c": 24, "t": 0.007}, {"n": "gateway/platforms/signal.py", "a": 36, "d": 3, "c": 39, "t": 0.012}, {"n": "gateway/platforms/slack.py", "a": 116, "d": 32, "c": 148, "t": 0.045}, {"n": "gateway/platforms/telegram.py", "a": 233, "d": 24, "c": 257, "t": 0.079}, {"n": "gateway/platforms/telegram_network.py", "a": 12, "d": 0, "c": 12, "t": 0.004}, {"n": "gateway/platforms/webhook.py", "a": 58, "d": 1, "c": 59, "t": 0.018}, {"n": "gateway/platforms/wecom.py", "a": 1338, "d": 0, "c": 1338, "t": 0.411}, {"n": "gateway/platforms/whatsapp.py", "a": 151, "d": 104, "c": 255, "t": 0.078}, {"n": "gateway/run.py", "a": 137, "d": 33, "c": 170, "t": 0.052}, {"n": "hermes", "a": 5, "d": 6, "c": 11, "t": 0.003}, {"n": "hermes_cli/__init__.py", "a": 2, "d": 2, "c": 4, "t": 0.001}, {"n": "hermes_cli/auth.py", "a": 18, "d": 9, "c": 27, "t": 0.008}, {"n": "hermes_cli/banner.py", "a": 25, "d": 2, "c": 27, "t": 0.008}, {"n": "hermes_cli/callbacks.py", "a": 7, "d": 3, "c": 10, "t": 0.003}, {"n": "hermes_cli/checklist.py", "a": 5, "d": 0, "c": 5, "t": 0.002}, {"n": "hermes_cli/claw.py", "a": 13, "d": 1, "c": 14, "t": 0.004}, {"n": "hermes_cli/codex_models.py", "a": 4, "d": 1, "c": 5, "t": 0.002}, {"n": "hermes_cli/config.py", "a": 51, "d": 2, "c": 53, "t": 0.016}, {"n": "hermes_cli/curses_ui.py", "a": 36, "d": 4, "c": 40, "t": 0.012}, {"n": "hermes_cli/doctor.py", "a": 76, "d": 27, "c": 103, "t": 0.032}, {"n": "hermes_cli/gateway.py", "a": 156, "d": 18, "c": 174, "t": 0.053}, {"n": "hermes_cli/main.py", "a": 620, "d": 37, "c": 657, "t": 0.202}, {"n": "hermes_cli/mcp_config.py", "a": 13, "d": 2, "c": 15, "t": 0.005}, {"n": "hermes_cli/models.py", "a": 4, "d": 0, "c": 4, "t": 0.001}, {"n": "hermes_cli/plugins.py", "a": 48, "d": 1, "c": 49, "t": 0.015}, {"n": "hermes_cli/plugins_cmd.py", "a": 153, "d": 2, "c": 155, "t": 0.048}, {"n": "hermes_cli/profiles.py", "a": 906, "d": 0, "c": 906, "t": 0.278}, {"n": "hermes_cli/runtime_provider.py", "a": 4, "d": 1, "c": 5, "t": 0.002}, {"n": "hermes_cli/setup.py", "a": 43, "d": 12, "c": 55, "t": 0.017}, {"n": "hermes_cli/skills_config.py", "a": 6, "d": 0, "c": 6, "t": 0.002}, {"n": "hermes_cli/skills_hub.py", "a": 51, "d": 28, "c": 79, "t": 0.024}, {"n": "hermes_cli/status.py", "a": 5, "d": 1, "c": 6, "t": 0.002}, {"n": "hermes_cli/tools_config.py", "a": 88, "d": 3, "c": 91, "t": 0.028}, {"n": "hermes_cli/webhook.py", "a": 260, "d": 0, "c": 260, "t": 0.08}, {"n": "hermes_constants.py", "a": 41, "d": 0, "c": 41, "t": 0.013}, {"n": "honcho_integration/cli.py", "a": 2, "d": 2, "c": 4, "t": 0.001}, {"n": "honcho_integration/client.py", "a": 10, "d": 1, "c": 11, "t": 0.003}, {"n": "mcp_serve.py", "a": 868, "d": 0, "c": 868, "t": 0.267}, {"n": "nix/nixosModules.nix", "a": 8, "d": 5, "c": 13, "t": 0.004}, {"n": "optional-skills/communication/DESCRIPTION.md", "a": 1, "d": 0, "c": 1, "t": 0.0}, {"n": "optional-skills/communication/one-three-one-rule/SKILL.md", "a": 103, "d": 0, "c": 103, "t": 0.032}, {"n": "optional-skills/migration/openclaw-migration/scripts/openclaw_to_hermes.py", "a": 203, "d": 62, "c": 265, "t": 0.081}, {"n": "optional-skills/productivity/canvas/SKILL.md", "a": 97, "d": 0, "c": 97, "t": 0.03}, {"n": "optional-skills/productivity/canvas/scripts/canvas_api.py", "a": 157, "d": 0, "c": 157, "t": 0.048}, {"n": "optional-skills/productivity/memento-flashcards/SKILL.md", "a": 324, "d": 0, "c": 324, "t": 0.1}, {"n": "optional-skills/productivity/memento-flashcards/scripts/memento_cards.py", "a": 353, "d": 0, "c": 353, "t": 0.108}, {"n": "optional-skills/productivity/memento-flashcards/scripts/youtube_quiz.py", "a": 88, "d": 0, "c": 88, "t": 0.027}, {"n": "optional-skills/productivity/siyuan/SKILL.md", "a": 297, "d": 0, "c": 297, "t": 0.091}, {"n": "optional-skills/research/parallel-cli/SKILL.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "optional-skills/research/scrapling/SKILL.md", "a": 335, "d": 0, "c": 335, "t": 0.103}, {"n": "pyproject.toml", "a": 5, "d": 1, "c": 6, "t": 0.002}, {"n": "run_agent.py", "a": 176, "d": 38, "c": 214, "t": 0.066}, {"n": "scripts/whatsapp-bridge/allowlist.js", "a": 79, "d": 0, "c": 79, "t": 0.024}, {"n": "scripts/whatsapp-bridge/allowlist.test.mjs", "a": 47, "d": 0, "c": 47, "t": 0.014}, {"n": "scripts/whatsapp-bridge/bridge.js", "a": 11, "d": 7, "c": 18, "t": 0.006}, {"n": "skills/creative/songwriting-and-ai-music/SKILL.md", "a": 289, "d": 0, "c": 289, "t": 0.089}, {"n": "skills/devops/webhook-subscriptions/SKILL.md", "a": 180, "d": 0, "c": 180, "t": 0.055}, {"n": "skills/github/github-auth/SKILL.md", "a": 3, "d": 0, "c": 3, "t": 0.001}, {"n": "skills/github/github-auth/scripts/gh-env.sh", "a": 5, "d": 0, "c": 5, "t": 0.002}, {"n": "skills/github/github-code-review/SKILL.md", "a": 5, "d": 1, "c": 6, "t": 0.002}, {"n": "skills/github/github-issues/SKILL.md", "a": 5, "d": 1, "c": 6, "t": 0.002}, {"n": "skills/github/github-pr-workflow/SKILL.md", "a": 5, "d": 1, "c": 6, "t": 0.002}, {"n": "skills/github/github-repo-management/SKILL.md", "a": 5, "d": 1, "c": 6, "t": 0.002}, {"n": "skills/music-creation/DESCRIPTION.md", "a": 0, "d": 3, "c": 3, "t": 0.001}, {"n": "skills/productivity/google-workspace/SKILL.md", "a": 5, "d": 0, "c": 5, "t": 0.002}, {"n": "skills/research/duckduckgo-search/SKILL.md", "a": 108, "d": 59, "c": 167, "t": 0.051}, {"n": "tests/acp/test_entry.py", "a": 20, "d": 0, "c": 20, "t": 0.006}, {"n": "tests/acp/test_server.py", "a": 71, "d": 0, "c": 71, "t": 0.022}, {"n": "tests/agent/test_auxiliary_client.py", "a": 11, "d": 8, "c": 19, "t": 0.006}, {"n": "tests/agent/test_external_skills.py", "a": 157, "d": 0, "c": 157, "t": 0.048}, {"n": "tests/agent/test_prompt_builder.py", "a": 8, "d": 5, "c": 13, "t": 0.004}, {"n": "tests/agent/test_redact.py", "a": 49, "d": 0, "c": 49, "t": 0.015}, {"n": "tests/agent/test_skill_commands.py", "a": 1, "d": 11, "c": 12, "t": 0.004}, {"n": "tests/cron/test_scheduler.py", "a": 68, "d": 0, "c": 68, "t": 0.021}, {"n": "tests/gateway/test_allowlist_startup_check.py", "a": 2, "d": 2, "c": 4, "t": 0.001}, {"n": "tests/gateway/test_api_server.py", "a": 40, "d": 1, "c": 41, "t": 0.013}, {"n": "tests/gateway/test_base_topic_sessions.py", "a": 87, "d": 0, "c": 87, "t": 0.027}, {"n": "tests/gateway/test_config.py", "a": 76, "d": 0, "c": 76, "t": 0.023}, {"n": "tests/gateway/test_discord_reactions.py", "a": 170, "d": 0, "c": 170, "t": 0.052}, {"n": "tests/gateway/test_dm_topics.py", "a": 5, "d": 2, "c": 7, "t": 0.002}, {"n": "tests/gateway/test_email.py", "a": 117, "d": 0, "c": 117, "t": 0.036}, {"n": "tests/gateway/test_feishu.py", "a": 2580, "d": 0, "c": 2580, "t": 0.793}, {"n": "tests/gateway/test_hooks.py", "a": 12, "d": 7, "c": 19, "t": 0.006}, {"n": "tests/gateway/test_matrix_voice.py", "a": 340, "d": 0, "c": 340, "t": 0.104}, {"n": "tests/gateway/test_mattermost.py", "a": 85, "d": 1, "c": 86, "t": 0.026}, {"n": "tests/gateway/test_media_download_retry.py", "a": 164, "d": 0, "c": 164, "t": 0.05}, {"n": "tests/gateway/test_platform_base.py", "a": 12, "d": 0, "c": 12, "t": 0.004}, {"n": "tests/gateway/test_platform_reconnect.py", "a": 29, "d": 3, "c": 32, "t": 0.01}, {"n": "tests/gateway/test_runner_fatal_adapter.py", "a": 3, "d": 2, "c": 5, "t": 0.002}, {"n": "tests/gateway/test_signal.py", "a": 102, "d": 30, "c": 132, "t": 0.041}, {"n": "tests/gateway/test_slack.py", "a": 11, "d": 0, "c": 11, "t": 0.003}, {"n": "tests/gateway/test_telegram_group_gating.py", "a": 110, "d": 0, "c": 110, "t": 0.034}, {"n": "tests/gateway/test_telegram_network.py", "a": 18, "d": 0, "c": 18, "t": 0.006}, {"n": "tests/gateway/test_unauthorized_dm_behavior.py", "a": 29, "d": 2, "c": 31, "t": 0.01}, {"n": "tests/gateway/test_webhook_dynamic_routes.py", "a": 87, "d": 0, "c": 87, "t": 0.027}, {"n": "tests/gateway/test_wecom.py", "a": 596, "d": 0, "c": 596, "t": 0.183}, {"n": "tests/gateway/test_whatsapp_connect.py", "a": 83, "d": 0, "c": 83, "t": 0.025}, {"n": "tests/hermes_cli/test_cmd_update.py", "a": 21, "d": 0, "c": 21, "t": 0.006}, {"n": "tests/hermes_cli/test_gateway_service.py", "a": 4, "d": 3, "c": 7, "t": 0.002}, {"n": "tests/hermes_cli/test_launcher.py", "a": 42, "d": 0, "c": 42, "t": 0.013}, {"n": "tests/hermes_cli/test_profiles.py", "a": 622, "d": 0, "c": 622, "t": 0.191}, {"n": "tests/hermes_cli/test_skills_skip_confirm.py", "a": 51, "d": 9, "c": 60, "t": 0.018}, {"n": "tests/hermes_cli/test_tool_token_estimation.py", "a": 283, "d": 0, "c": 283, "t": 0.087}, {"n": "tests/hermes_cli/test_tools_config.py", "a": 50, "d": 0, "c": 50, "t": 0.015}, {"n": "tests/hermes_cli/test_update_gateway_restart.py", "a": 90, "d": 0, "c": 90, "t": 0.028}, {"n": "tests/hermes_cli/test_webhook_cli.py", "a": 189, "d": 0, "c": 189, "t": 0.058}, {"n": "tests/skills/test_memento_cards.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/skills/test_youtube_quiz.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_api_key_providers.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_status_bar.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_cli_tools_command.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_codex_models.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_compressor_fallback_update.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_mcp_serve.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_percentage_clamp.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_plugins_cmd.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_project_metadata.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_provider_fallback.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_run_agent.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_streaming.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/test_surrogate_sanitization.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_approval.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_browser_content_none_guard.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_credential_files.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_daytona_environment.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_honcho_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_local_persistent.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_mcp_dynamic_discovery.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_send_message_missing_platforms.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_skill_env_passthrough.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_skill_manager_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_skills_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_terminal_timeout_output.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_transcription_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_vision_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tests/tools/test_website_policy.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/approval.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/browser_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/credential_files.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/cronjob_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/delegate_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/environments/daytona.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/environments/docker.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/environments/local.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/environments/modal.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/environments/singularity.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/environments/ssh.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/file_operations.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/file_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/honcho_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/mcp_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/memory_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/registry.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/send_message_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/skill_manager_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/skills_hub.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/skills_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/terminal_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/transcription_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/tts_tool.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/vision_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "tools/web_tools.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "toolsets.py", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "uv.lock", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/developer-guide/contributing.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/developer-guide/creating-skills.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/guides/migrate-from-openclaw.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/guides/team-telegram-assistant.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/reference/cli-commands.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/reference/environment-variables.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/reference/faq.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/reference/profile-commands.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/reference/skills-catalog.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/reference/toolsets-reference.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/configuration.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/docker.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/features/api-server.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/features/fallback-providers.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/features/hooks.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/features/mcp.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/features/plugins.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/features/skills.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/email.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/feishu.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/index.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/mattermost.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/signal.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/slack.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/telegram.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/webhooks.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/wecom.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/messaging/whatsapp.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/profiles.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/docs/user-guide/security.md", "a": 0, "d": 0, "c": 0, "t": 0.0}, {"n": "website/sidebars.ts", "a": 0, "d": 0, "c": 0, "t": 0.0}];
+var dirs=[{"name": "root", "count": 14, "churn": 1836}, {"name": ".github", "count": 1, "churn": 61}, {"name": "acp_adapter", "count": 2, "churn": 51}, {"name": "agent", "count": 10, "churn": 348}, {"name": "cron", "count": 1, "churn": 65}, {"name": "docker", "count": 2, "churn": 49}, {"name": "environments", "count": 1, "churn": 449}, {"name": "gateway", "count": 20, "churn": 6311}, {"name": "hermes_cli", "count": 24, "churn": 2750}, {"name": "honcho_integration", "count": 2, "churn": 15}, {"name": "nix", "count": 1, "churn": 13}, {"name": "optional-skills", "count": 11, "churn": 2020}, {"name": "scripts", "count": 3, "churn": 144}, {"name": "skills", "count": 11, "churn": 676}, {"name": "tests", "count": 70, "churn": 6581}, {"name": "tools", "count": 26, "churn": 0}, {"name": "website", "count": 31, "churn": 0}];
+var grid=[[0, 0, 173, 398], [173, 0, 222, 398], [395, 0, 230, 140], [395, 140, 230, 258], [0, 398, 105, 502], [105, 398, 59, 502], [164, 398, 461, 370], [164, 768, 461, 132], [625, 0, 575, 72], [625, 72, 575, 65], [625, 137, 264, 174], [889, 137, 311, 174], [625, 312, 265, 243], [625, 554, 265, 346], [890, 312, 310, 222], [890, 533, 310, 367]];
+var tblocks=[{"type": "index", "lines": [".dockerignore                                        6828", ".env.example                                         3377", ".github/workflows/docker-publish.yml                 3863", "AGENTS.md                                            1401", "Dockerfile                                           4177", "RELEASE_v0.6.0.md                                    7883", "acp_adapter/entry.py                                 9859", "acp_adapter/server.py                                2651", "agent/auxiliary_client.py                            7498", "agent/context_compressor.py                          1945", "agent/display.py                                     8051", "agent/model_metadata.py                              8962", "agent/models_dev.py                                  7093", "agent/prompt_builder.py                              5445", "agent/redact.py                                      2963", "agent/skill_commands.py                              5361", "agent/skill_utils.py                                 5503", "agent/title_generator.py                             1545", "cli-config.yaml.example                              8436", "cli.py                                               5858", "cron/scheduler.py                                    3978", "docker/SOUL.md                                       9429", "docker/entrypoint.sh                                 2948", "environments/benchmarks/terminalbench_2/terminalbench2_env.py   6549", "gateway/builtin_hooks/__init__.py                    8191", "gateway/builtin_hooks/boot_md.py                     1278", "gateway/config.py                                    4504", "gateway/hooks.py                                     4403", "gateway/pairing.py                                   1888", "gateway/platforms/api_server.py                      6021", "gateway/platforms/base.py                            4285", "gateway/platforms/discord.py                         9521", "gateway/platforms/email.py                           7400", "gateway/platforms/feishu.py                          4049", "gateway/platforms/matrix.py                          4924", "gateway/platforms/mattermost.py                      3806", "gateway/platforms/signal.py                          9558", "gateway/platforms/slack.py                            227", "gateway/platforms/telegram.py                        7746", "gateway/platforms/telegram_network.py                5539", "gateway/platforms/webhook.py                         2001", "gateway/platforms/wecom.py                           5509", "gateway/platforms/whatsapp.py                        7880", "gateway/run.py                                       2820", "hermes                                               1923", "hermes_cli/__init__.py                               9418", "hermes_cli/auth.py                                   6639", "hermes_cli/banner.py                                 7734", "hermes_cli/callbacks.py                              3326", "hermes_cli/checklist.py                              3287", "hermes_cli/claw.py                                   2374", "hermes_cli/codex_models.py                           1651", "hermes_cli/config.py                                  227", "hermes_cli/curses_ui.py                              6292", "hermes_cli/doctor.py                                 1548", "hermes_cli/gateway.py                                5741", "hermes_cli/main.py                                   1814", "hermes_cli/mcp_config.py                              498", "hermes_cli/models.py                                 6266", "hermes_cli/plugins.py                                2930", "hermes_cli/plugins_cmd.py                            6936", "hermes_cli/profiles.py                               5477", "hermes_cli/runtime_provider.py                       9130", "hermes_cli/setup.py                                  8637", "hermes_cli/skills_config.py                          8844", "hermes_cli/skills_hub.py                             6857", "hermes_cli/status.py                                 3292", "hermes_cli/tools_config.py                           9883", "hermes_cli/webhook.py                                4608", "hermes_constants.py                                   558", "honcho_integration/cli.py                             822", "honcho_integration/client.py                         9123", "mcp_serve.py                                         1928", "nix/nixosModules.nix                                  173", "optional-skills/communication/DESCRIPTION.md         9762", "optional-skills/communication/one-three-one-rule/SKILL.md   6592", "optional-skills/migration/openclaw-migration/scripts/openclaw_to_hermes.py   1443", "optional-skills/productivity/canvas/SKILL.md         5935", "optional-skills/productivity/canvas/scripts/canvas_api.py   5909", "optional-skills/productivity/memento-flashcards/SKILL.md   1566"]}, {"type": "log", "lines": ["  chore: release v0.6.0 (2026.3.30) (#3985)", "  fix(security): extend secret redaction to ElevenLabs, Tavily and Exa API keys (#", "  fix: add TTY guard to interactive CLI commands to prevent CPU spin (#3933)", "  fix: resolve 7 failing CI tests (#3936)", "  fix: openclaw migration overwrites model config dict with string (#3924)", "  fix: background task media delivery + vision download timeout (#3919)", "  fix(whatsapp): skip reply prefix in bot mode \u2014 only needed for self-chat (#3931)", "  fix(cli): remove input() from /tools disable that freezes the terminal (#3918)", "  feat(plugins): add inject_message interface for remote message injection (#3778)", "  feat: mount skills directory into all remote backends with live sync (#3890)", "  feat(slack): multi-workspace support via OAuth token file (#3903)", "  fix(cron): tighten [SILENT] instruction to prevent report-with-silent-prefix (#3", "  fix(docs): escape angle-bracket URLs in feishu.md breaking MDX build (#3902)", "  feat(matrix): support native voice messages via MSC3245 (#3877)", "  feat(approvals): make dangerous command approval timeout configurable (#3886)", "  fix(cli): prevent status bar wrapping into duplicate rows (#3883)", "  docs: comprehensive OpenClaw migration guide (#3900)", "  fix(migration): expand OpenClaw migration to cover full data footprint (#3869)", "  feat(telegram): add webhook mode as alternative to polling (#3880)", "  security: harden dangerous command detection and add file tool path guards (#387"]}, {"type": "diff", "lines": ["+ acp_adapter/entry.py  (+1/-1)", "+ acp_adapter/server.py  (+46/-3)", "+ agent/auxiliary_client.py  (+73/-12)", "+ agent/context_compressor.py  (+2/-2)", "+ agent/display.py  (+35/-8)", "+ agent/model_metadata.py  (+1/-0)", "+ agent/models_dev.py  (+4/-4)", "+ agent/prompt_builder.py  (+59/-1)", "+ agent/redact.py  (+3/-0)", "+ agent/skill_commands.py  (+45/-30)", "+ agent/skill_utils.py  (+67/-0)", "+ agent/title_generator.py  (+1/-1)", "+ cli.py  (+207/-79)", "+ cron/scheduler.py  (+48/-17)", "+ environments/benchmarks/terminalbench_2/terminalbench2_env.py  (+446/-3)", "+ gateway/builtin_hooks/__init__.py  (+1/-0)", "+ gateway/builtin_hooks/boot_md.py  (+86/-0)", "+ gateway/config.py  (+117/-43)", "+ gateway/hooks.py  (+19/-0)", "+ gateway/pairing.py  (+2/-2)", "+ gateway/platforms/api_server.py  (+40/-5)"]}, {"type": "stats", "lines": ["resolved_issues: 16", "root/  14 files  1836 changes", ".github/  1 files  61 changes", "acp_adapter/  2 files  51 changes", "agent/  10 files  348 changes", "cron/  1 files  65 changes", "docker/  2 files  49 changes", "environments/  1 files  449 changes", "gateway/  20 files  6311 changes", "hermes_cli/  24 files  2750 changes", "honcho_integration/  2 files  15 changes"]}];
+var commits=["chore: release v0.6.0 (2026.3.30) (#3985)", "fix(security): extend secret redaction to ElevenLabs, Tavily and Exa API keys (#", "fix: add TTY guard to interactive CLI commands to prevent CPU spin (#3933)", "fix: resolve 7 failing CI tests (#3936)", "fix: openclaw migration overwrites model config dict with string (#3924)", "fix: background task media delivery + vision download timeout (#3919)", "fix(whatsapp): skip reply prefix in bot mode \u2014 only needed for self-chat (#3931)", "fix(cli): remove input() from /tools disable that freezes the terminal (#3918)", "feat(plugins): add inject_message interface for remote message injection (#3778)", "feat: mount skills directory into all remote backends with live sync (#3890)", "feat(slack): multi-workspace support via OAuth token file (#3903)", "fix(cron): tighten [SILENT] instruction to prevent report-with-silent-prefix (#3", "fix(docs): escape angle-bracket URLs in feishu.md breaking MDX build (#3902)", "feat(matrix): support native voice messages via MSC3245 (#3877)", "feat(approvals): make dangerous command approval timeout configurable (#3886)", "fix(cli): prevent status bar wrapping into duplicate rows (#3883)", "docs: comprehensive OpenClaw migration guide (#3900)", "fix(migration): expand OpenClaw migration to cover full data footprint (#3869)", "feat(telegram): add webhook mode as alternative to polling (#3880)", "security: harden dangerous command detection and add file tool path guards (#387", "fix(agent): support full context length resolution for direct Gemini API endpoin", "feat(discord): add message processing reactions (salvage #1980) (#3871)", "fix: use argparse entrypoint in top-level launcher (#3874)", "feat(telegram): add group mention gating and regex triggers (#3870)", "fix(setup): auto-install matrix-nio during hermes setup (#3873)", "fix(terminal): preserve partial output when command times out (#3868)", "fix(nous): use curated model list instead of full API dump for Nous Portal (#386", "feat(gateway): add WeCom (Enterprise WeChat) platform support (#3847)", "fix: add INFO-level logging for auxiliary provider resolution (#3866)", "Gate tool-gateway behind an env var, so it\\'s not in users\\' faces until we\\'re rea"];
+
+var _s=seed;
+function R(){_s=(_s*16807)%2147483647;return(_s&0x7fffffff)/2147483647;}
+
+// Fill bg
+x.fillStyle=bg;
+x.fillRect(0,0,W,H);
+
+// LAYER 1: Dense colored block grid
+for(var i=0;i<grid.length;i++){
+  var g=grid[i],gx=g[0],gy=g[1],gw=g[2],gh=g[3];
+  var fi=i%Math.max(files.length,1);
+  var f=files.length?files[fi]:{t:0.5,a:10,d:5,c:15};
+  var col=acc[i%acc.length];
+  var t=f.t;
+
+  // Cell fill: dense small blocks
+  var bs=Math.max(2,Math.round(3+R()*5));
+  for(var by=gy;by<gy+gh;by+=bs){
+    for(var bx=gx;bx<gx+gw;bx+=bs){
+      var pick=R();
+      if(pick<t*0.7){
+        x.fillStyle=col;
+        x.globalAlpha=0.4+R()*0.6;
+      } else if(pick<t*0.7+0.15){
+        x.fillStyle=acc[Math.floor(R()*acc.length)];
+        x.globalAlpha=0.2+R()*0.5;
+      } else {
+        x.fillStyle=bg;
+        x.globalAlpha=0.6+R()*0.4;
+      }
+      x.fillRect(Math.round(bx),Math.round(by),bs,bs);
+    }
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 2: Grid borders
+x.strokeStyle=fg;
+x.globalAlpha=0.15;
+x.lineWidth=1;
+for(var i=0;i<grid.length;i++){
+  var g=grid[i];
+  x.strokeRect(g[0],g[1],g[2],g[3]);
+}
+x.globalAlpha=1;
+
+// LAYER 3: Horizontal color bands (pixel sort effect)
+var nBands=3+Math.round(R()*5);
+for(var b=0;b<nBands;b++){
+  var by=Math.round(R()*H*0.9);
+  var bh=Math.max(4,Math.round(R()*30));
+  var col1=acc[Math.floor(R()*acc.length)];
+  var col2=acc[Math.floor(R()*acc.length)];
+  var startX=Math.round(R()*W*0.3);
+  var endX=Math.round(startX+W*0.3+R()*W*0.4);
+
+  for(var bx=startX;bx<endX;bx+=2){
+    var t2=(bx-startX)/(endX-startX);
+    x.fillStyle=t2<0.5?col1:col2;
+    x.globalAlpha=0.3+R()*0.4;
+    x.fillRect(bx,by,2,bh);
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 4: Overlay panels with text content
+var panels=[];
+for(var ti=0;ti<tblocks.length;ti++){
+  var tb=tblocks[ti];
+  var px=Math.round(R()*W*0.5);
+  var py=Math.round(R()*H*0.5);
+  var pw=Math.round(200+R()*500);
+  var ph=Math.round(150+R()*400);
+  panels.push({x:px,y:py,w:pw,h:ph,tb:tb});
+}
+
+// Draw panels
+for(var pi=0;pi<panels.length;pi++){
+  var p=panels[pi];
+  var panelBg=R()<0.5?bg:acc[Math.floor(R()*acc.length)];
+  x.fillStyle=panelBg;
+  x.globalAlpha=0.7+R()*0.3;
+  x.fillRect(p.x,p.y,p.w,p.h);
+
+  // Panel border
+  x.strokeStyle=fg;
+  x.globalAlpha=0.3;
+  x.lineWidth=1;
+  x.strokeRect(p.x,p.y,p.w,p.h);
+
+  // Text content
+  x.globalAlpha=0.7+R()*0.3;
+  x.fillStyle=fg;
+  var fontSize=Math.round(8+R()*4);
+  x.font=fontSize+'px monospace';
+  var lines=p.tb.lines||[];
+  var ly=p.y+fontSize+4;
+  for(var li=0;li<lines.length&&ly<p.y+p.h-4;li++){
+    var line=lines[li];
+    if(line.length>Math.floor(p.w/(fontSize*0.6))){
+      line=line.substring(0,Math.floor(p.w/(fontSize*0.6)));
+    }
+    x.fillText(line,p.x+6,ly);
+    ly+=fontSize+2;
+  }
+}
+x.globalAlpha=1;
+
+// LAYER 5: Large accent rectangles (bold color blocks like the reference)
+var nBlocks=2+Math.round(R()*4);
+for(var i=0;i<nBlocks;i++){
+  var bx2=Math.round(R()*W*0.7);
+  var by2=Math.round(R()*H*0.7);
+  var bw2=Math.round(80+R()*300);
+  var bh2=Math.round(60+R()*200);
+  x.fillStyle=acc[Math.floor(R()*acc.length)];
+  x.globalAlpha=0.15+R()*0.35;
+  x.fillRect(bx2,by2,bw2,bh2);
+}
+x.globalAlpha=1;
+
+// LAYER 6: Scattered commit text at various sizes
+for(var i=0;i<commits.length;i++){
+  var tx=R()*W*0.85;
+  var ty=20+R()*H*0.9;
+  var ts=Math.round(7+R()*14);
+  x.font=ts+'px monospace';
+  x.fillStyle=R()<0.4?fg:acc[Math.floor(R()*acc.length)];
+  x.globalAlpha=0.08+R()*0.25;
+  x.fillText(commits[i],tx,ty);
+}
+x.globalAlpha=1;
+
+// LAYER 7: Filename waterfall (dense vertical text column)
+var colX=Math.round(R()*W*0.3);
+var colW=Math.round(200+R()*300);
+x.font='8px monospace';
+x.fillStyle=fg;
+x.globalAlpha=0.15;
+x.fillRect(colX,0,colW,H);
+x.globalAlpha=0.6;
+var fy=10;
+for(var i=0;i<files.length&&fy<H;i++){
+  var fn=files[i].n;
+  if(fn.length>Math.floor(colW/5))fn=fn.substring(0,Math.floor(colW/5));
+  x.fillStyle=files[i].t>0.5?acc[i%acc.length]:fg;
+  x.globalAlpha=0.3+files[i].t*0.5;
+  x.fillText(fn,colX+4,fy);
+  fy+=10;
+}
+x.globalAlpha=1;
+
+// LAYER 8: Directory labels (large, semi-transparent)
+for(var i=0;i<dirs.length&&i<8;i++){
+  var d=dirs[i];
+  var dx=Math.round(R()*W*0.7);
+  var dy=Math.round(R()*H*0.8)+40;
+  var ds=Math.round(18+R()*30);
+  x.font='bold '+ds+'px monospace';
+  x.fillStyle=acc[i%acc.length];
+  x.globalAlpha=0.08+R()*0.12;
+  x.fillText(d.name+'/',dx,dy);
+}
+x.globalAlpha=1;
+
+// LAYER 9: Pixel noise strips (glitch effect)
+var nStrips=5+Math.round(R()*10);
+for(var i=0;i<nStrips;i++){
+  var sy=Math.round(R()*H);
+  var sh=Math.max(1,Math.round(R()*4));
+  var sx=Math.round(R()*W*0.5);
+  var sw=Math.round(W*0.2+R()*W*0.5);
+  var sc=acc[Math.floor(R()*acc.length)];
+  x.fillStyle=sc;
+  x.globalAlpha=0.3+R()*0.5;
+  x.fillRect(sx,sy,sw,sh);
+}
+x.globalAlpha=1;
+
+// LAYER 10: Data stat overlay
+x.font='10px monospace';
+x.fillStyle=fg;
+x.globalAlpha=0.35;
+var sx2=W-200;
+var sy2=20;
+var statText=['v2026.3.30'];
+for(var i=0;i<dirs.length&&i<6;i++){
+  statText.push(dirs[i].name+'/  '+dirs[i].count+' files');
+}
+for(var i=0;i<statText.length;i++){
+  x.fillText(statText[i],sx2,sy2+i*14);
+}
+
+// Signature
+x.globalAlpha=0.3;
+x.font='9px monospace';
+x.fillText('v2026.3.30 — hermes archaeology',8,H-8);
+x.globalAlpha=1;
+
+})();</script>
+</body>
+</html>

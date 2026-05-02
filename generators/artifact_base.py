@@ -7,13 +7,17 @@ import hashlib
 from datetime import datetime
 
 
-def html_wrap(title, body_html, css="", js="", meta=None):
+P5_CDN = "https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"
+
+
+def html_wrap(title, body_html, css="", js="", meta=None, include_p5=False):
     """Wrap body content in a complete HTML document."""
     meta = meta or {}
     meta_tags = "\n".join(
         f'    <meta name="{k}" content="{v}">'
         for k, v in meta.items()
     )
+    p5_tag = f'    <script src="{P5_CDN}"></script>' if include_p5 else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +26,7 @@ def html_wrap(title, body_html, css="", js="", meta=None):
     <meta name="generator" content="hermes-archaeology-museum">
 {meta_tags}
     <title>{title}</title>
+{p5_tag}
     <style>
         *, *::before, *::after {{ margin: 0; padding: 0; box-sizing: border-box; }}
         html {{ -webkit-font-smoothing: antialiased; }}
@@ -102,6 +107,7 @@ def generate_artifact_meta(release, artifact_type):
 def _make_title(release, artifact_type):
     """Generate an evocative title for the artifact."""
     tag = release["tag"]
+    name = release.get("name", tag)
     type_titles = {
         "index_of": f"Index of /{tag}/",
         "system_alert": f"System Alert — {tag}",
@@ -109,5 +115,6 @@ def _make_title(release, artifact_type):
         "heat_grid": f"Churn Map [{tag}]",
         "terminal_archaeology": f"term://hermes@{tag}",
         "petri_culture": f"Culture #{tag}",
+        "layered_composition": f"{name}",
     }
     return type_titles.get(artifact_type, f"Artifact {tag}")

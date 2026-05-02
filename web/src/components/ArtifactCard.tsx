@@ -41,9 +41,11 @@ export function ArtifactCard({
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/60 group-hover:to-white/40 transition-all" />
         </div>
 
-        {/* Reflection excerpt */}
-        <div className="text-sm leading-relaxed text-[var(--color-fg)] max-w-2xl">
-          {reflection.split("\n\n")[0]}
+        {/* Monologue excerpt */}
+        <div className="font-mono text-xs leading-[2] text-[var(--color-dim)] max-w-2xl italic">
+          {reflection.split("\n").slice(0, 2).map((line, i) => (
+            <div key={i}>{line}</div>
+          ))}
         </div>
 
         <div className="mt-3 text-[10px] text-[var(--color-dim)] uppercase tracking-wider">
